@@ -4,11 +4,11 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>Maven_Project1</groupId>
-  <artifactId>package1</artifactId>
+  <groupId>Project1</groupId>
+  <artifactId>Ecommerce</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>package1</name>
+  <name>Ecommerce</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -19,30 +19,35 @@
   </properties>
 
   <dependencies>
-      
-    <dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-java</artifactId>
-	    <version>4.26.0</version>
-	</dependency>
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>4.11</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.25.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		        <version>7.8.0</version>
+		    <scope>compile</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>5.2.3</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>5.2.3</version>
+		</dependency>
 
-    <dependency>
-	    <groupId>org.testng</groupId>
-	    <artifactId>testng</artifactId>
-	    <version>7.8.0</version>
-	    <scope>compile</scope>
-	</dependency>
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi</artifactId>
-	    <version>5.2.3</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.apache.poi</groupId>
-	    <artifactId>poi-ooxml</artifactId>
-	    <version>5.2.3</version>
-	</dependency>
-
+		
   </dependencies>
 
   <build>
@@ -89,7 +94,7 @@
 					<version>3.3.1</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>Amazon_POM_Testing.xml</suiteXmlFile>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
 							<!--suiteXmlFile>target\surefire-reports\testng-failed.xml</suiteXmlFile-->
 						</suiteXmlFiles>
 					</configuration>
