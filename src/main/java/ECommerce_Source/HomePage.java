@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage
+public class HomePage extends DDT_Class
 {
 	WebDriver driver;
 	@FindBy(xpath="//span[@class='nav-line-2 ']")
@@ -28,6 +28,21 @@ public class HomePage
 	
 	@FindBy(id="twotabsearchtextbox")
 	public static WebElement SearchBox_Elmnt;
+	
+	@FindBy(xpath="(//span[@id='selectProfileModalId']/div/div/div)[2]")
+	WebElement mng_Profile_Elmnt;
+	
+	@FindBy(xpath="//div[@class='sc-hmdomO qqYTW']/a[.='View']")
+	public WebElement View_btn;
+	
+	@FindBy(xpath="//div[@id='a-popover-2']")
+	public WebElement profile_Alert;
+	
+	@FindBy(xpath="(//div[@id='nav-al-your-account']/a/span)[1]")
+	WebElement yourAccount_Elmnt;
+	
+	@FindBy(xpath="(//div[@id='nav-al-your-account']/a/span)[2]")
+	WebElement yourOrder_Elmnt;
 
 	public void acAndList(WebDriver driver)
 	{
@@ -38,14 +53,37 @@ public class HomePage
 	{
 		startHere_Elmnt.click();
 	}
+	public void yourAccount_Click()
+	{
+		yourAccount_Elmnt.click();
+	}
+	public void yourOrder_Click()
+	{
+		yourOrder_Elmnt.click();
+	}
+	public void manageProfile()
+	{
+		mng_Profile_Elmnt.click();
+	}
 	public void Sign_In()
 	{
 		Sign_In_Elmnt.click();
 	}
-	
-	public void searchProd()
+	public void View_mngProfile()
 	{
-		SearchBox_Elmnt.sendKeys("Pen"+ Keys.ENTER);
+//		Actions a1 = new Actions(driver);
+//		a1.doubleClick(View_btn).perform();
+		View_btn.click();
+	}
+	
+	public void searchProd_shoe()
+	{
+		SearchBox_Elmnt.sendKeys(SearchProd_Shoe+ Keys.ENTER);
+	}
+	
+	public void searchProd_pen()
+	{
+		SearchBox_Elmnt.sendKeys(SearchProd_Pen+ Keys.ENTER);
 	}
 	
 	public void ClickCart()

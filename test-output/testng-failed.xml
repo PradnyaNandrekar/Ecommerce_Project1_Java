@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="ECommerce_TestCases.TestCase10">
+      <class name="ECommerce_TestCases.TestCase01">
         <methods>
-          <include name="Quit_Amazon"/>
-          <include name="cartUpdateTest"/>
+          <include name="User_Registration_Test"/>
           <include name="Launch_Amazon"/>
         </methods>
-      </class> <!-- ECommerce_TestCases.TestCase10 -->
+      </class> <!-- ECommerce_TestCases.TestCase01 -->
+      <class name="ECommerce_TestCases.TestCase04">
+        <methods>
+          <include name="Edit_info_from_LoginSecurity"/>
+          <include name="Launch_Amazon"/>
+        </methods>
+      </class> <!-- ECommerce_TestCases.TestCase04 -->
+      <class name="ECommerce_TestCases.TestCase03">
+        <methods>
+          <include name="SignIn_Invalid_UN"/>
+          <include name="Launch_Amazon"/>
+        </methods>
+      </class> <!-- ECommerce_TestCases.TestCase03 -->
+      <class name="ECommerce_TestCases.TestCase12">
+        <methods>
+          <include name="Launch_Amazon"/>
+          <include name="PaymentMethod_Selection"/>
+        </methods>
+      </class> <!-- ECommerce_TestCases.TestCase12 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

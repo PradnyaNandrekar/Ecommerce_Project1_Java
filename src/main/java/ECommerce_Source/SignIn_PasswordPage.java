@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignIn_PasswordPage 
+public class SignIn_PasswordPage extends DDT_Class
 {
 	@FindBy(id="ap_password")
 	public WebElement Password_Elmnt;
@@ -28,19 +28,15 @@ public class SignIn_PasswordPage
 	
 	public void Enter_Password() throws EncryptedDocumentException, IOException
 	{
-		FileInputStream f1 = new FileInputStream("C:\\Users\\nandr\\eclipse-workspace\\ExcelDataSheet\\AmazonLoginData.xlsx");
-		Workbook wb1 = WorkbookFactory.create(f1);
-		String password = wb1.getSheet("LoginDetails").getRow(1).getCell(1).getStringCellValue();
-			
-		Password_Elmnt.sendKeys(password);
+		Password_Elmnt.sendKeys(password1);
+	}
+	public void Enter_Password_Ymn() throws EncryptedDocumentException, IOException
+	{
+		Password_Elmnt.sendKeys(password_Ymn);
 	}
 	public void Enter_Invalid_Password() throws EncryptedDocumentException, IOException
 	{
-		FileInputStream f1 = new FileInputStream("C:\\Users\\nandr\\eclipse-workspace\\ExcelDataSheet\\AmazonLoginData.xlsx");
-		Workbook wb1 = WorkbookFactory.create(f1);
-		String password = wb1.getSheet("LoginDetails").getRow(2).getCell(1).getStringCellValue();
-			
-		Password_Elmnt.sendKeys(password);
+		Password_Elmnt.sendKeys(password1_invld);
 	}
 	public void SignIn_Submit()
 	{

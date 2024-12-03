@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import ECommerce_Source.DDT_Class;
 import ECommerce_Source.HomePage;
 import ECommerce_Source.ProductPage;
 import ECommerce_Source.Product_ListPage;
@@ -23,9 +24,12 @@ import ECommerce_Source.SignIn_PasswordPage;
 
 public class TestCase10 extends Browser_Launch_Quit
 {
-	@Test
+	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class, enabled=true)
 	public void cartUpdateTest() throws EncryptedDocumentException, IOException, InterruptedException
 	{
+				DDT_Class dt = new DDT_Class();
+				dt.UserName();
+				dt.SerachProduct();
 				// -------------------Login ---------------
 				HomePage hmPg = new HomePage(driver);
 				hmPg.acAndList(driver);
@@ -36,12 +40,11 @@ public class TestCase10 extends Browser_Launch_Quit
 				SignIn_PasswordPage SnInPw= new SignIn_PasswordPage(driver);
 				SnInPw.Enter_Password();
 				SnInPw.SignIn_Submit();
-				//-------------Search Product----------------
-				hmPg.searchProd();
-				// ----------Select Product -----------------
+				//-------------Search and Select Product----------------
+				hmPg.searchProd_shoe();
 				Product_ListPage Prod_ListPg = new Product_ListPage(driver);
 				Prod_ListPg.select_1st_Prod();
-				//----------Add to cart ---------------------
+				//---------- Add product to cart ---------------------
 				Set<String> prodList = driver.getWindowHandles();
 				Iterator<String> i1 = prodList.iterator();
 				String P_ID = i1.next();
@@ -51,44 +54,53 @@ public class TestCase10 extends Browser_Launch_Quit
 				ProdPg.addTo_Cart();
 				ShoppingCart_PrePage CartPrePg = new ShoppingCart_PrePage(driver);
 				Assert.assertEquals(CartPrePg.AddCart_success_Elmnt.getText(), "Added to cart");
-				// ---------------- Go to Cart -----------------
+				// ---------------- Go to Cart -Check initial Qty-----------------
 				CartPrePg.GoToCart();
-				// Check Qty 
 				ShoppingCartPage ShpCartPg = new ShoppingCartPage(driver);
-//				int qty = Integer.parseInt(ShpCartPg.Subtotal_Elmnt.getText());
-//				System.out.println("Initial Qty -" +qty);
-				//--------------- Add Qty 1 -------------------
-				ShpCartPg.addQty();
+				WebDriverWait wx = new WebDriverWait(driver, Duration.ofSeconds(10));
+				wx.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(ShpCartPg.cnt_elmnt)));
+				
+				int qty = Integer.parseInt(ShpCartPg.cnt_elmnt.getText());
+				System.out.println("Initial Qty -" +qty);
+				//--------------- Add Qty 1 in cart-------------------
+				ShpCartPg.addQty(driver);
 				driver.navigate().refresh();
-				Thread.sleep(10);
-//				int qty1 = Integer.parseInt(ShpCartPg.Subtotal_Elmnt.getText());
-//				System.out.println("After Add-"+qty1);
+//				WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+//				w1.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(ShpCartPg.cnt_elmnt)));
+				//--------------- Chk Qty After add-------------------
+				int qty1 = Integer.parseInt(ShpCartPg.cnt_elmnt.getText());
+				System.out.println("After Add-"+qty1);
+		
+				// -------------- Check Initial Qty > Qty after add
+				Assert.assertEquals(qty1>qty, true, "Adding product failed");
+					
+				//---------------Remove qty 1 from cart------------------
 				
-				
-				// Check subtotal item should be 2
-//				Assert.assertEquals(qty1, qty1>qty, "Test Failed - Qty Not Updated");
-				
-				
-				//---------------Remove qty 1------------------
 				ShpCartPg.removeQty();
 				
-				// Check subtotal item should be 1
+				// ------------ Qty after remove should be < Qty after add
 				driver.navigate().refresh();
-				Thread.sleep(10);
-//				int qty2 = Integer.parseInt(ShpCartPg.Subtotal_Elmnt.getText());
-//				System.out.println("After remove-"+qty2);
+
+//				WebDriverWait w3 = new WebDriverWait(driver, Duration.ofSeconds(10));
+//				w3.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(ShpCartPg.cnt_elmnt)));
+
+				int qty2 = Integer.parseInt(ShpCartPg.cnt_elmnt.getText());
+				System.out.println("After remove-"+qty2);
 				
-//				Assert.assertEquals(qty2, qty2<qty1, "Test Failed - Qty Not Updated");
+				Assert.assertEquals(qty2<qty1, true, "Removing product failed");
 				
-				//---------------Delete from Cart --------------
-				WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-				w1.until(ExpectedConditions.visibilityOf(ShpCartPg.delete_btn));
+				//---------------Delete 1 product from Cart --------------
+//				Thread.sleep(5000);
+				int befrDelt = ShpCartPg.Qty_Stepper_Elmnt.size();
+				System.out.println("Items in Cart before delete -> "+befrDelt);
+				WebDriverWait w2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+				w2.until(ExpectedConditions.visibilityOf(ShpCartPg.delete_btn));
 				ShpCartPg.deleteProd();
-				String CartMsg= ShpCartPg.emptyCartTxt.getText();
-				System.out.println(ShpCartPg.emptyCartTxt.getText());
-				Assert.assertEquals(CartMsg.contains("Cart is empty"), true, "Delete Failed-Cart is not empty" );
-				
-		
+				Thread.sleep(5000);
+				int aftrDelt = ShpCartPg.Qty_Stepper_Elmnt.size();
+				System.out.println("Items in Cart after delete -> "+aftrDelt);
+				// ---Check No of items in cart after delete should be less than before delete
+				Assert.assertEquals(aftrDelt<befrDelt, true, "Deleting product Failed");
 	}
 
 }

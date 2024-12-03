@@ -46,7 +46,12 @@
 		    <artifactId>poi-ooxml</artifactId>
 		    <version>5.2.3</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>Maven_Project1</groupId>
+			<artifactId>package1</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
   </dependencies>
 
   <build>
@@ -65,10 +70,6 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.8.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.3.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>

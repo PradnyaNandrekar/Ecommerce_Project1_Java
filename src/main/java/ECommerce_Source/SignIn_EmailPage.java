@@ -15,10 +15,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SignIn_EmailPage extends DDT_Class
 {
-	
 	WebDriver driver;
 	@FindBy(id="ap_email")
-	public static WebElement UserName_Elmnt;
+	public WebElement UserName_Elmnt;
 	
 	@FindBy(id="continue")
 	WebElement Continue_Btn_Elmnt;
@@ -26,21 +25,21 @@ public class SignIn_EmailPage extends DDT_Class
 	@FindBy(id="auth-error-message-box")
 	public static WebElement Error_MsgBox_Elmnt;
 	
+	@FindBy(id="auth-email-invalid-claim-alert")
+	public WebElement Email_Wrong_Alert;
+	
+	
 	public void UserName() throws EncryptedDocumentException, IOException
 	{
-		FileInputStream f1 = new FileInputStream("C:\\Users\\nandr\\eclipse-workspace\\ExcelDataSheet\\AmazonLoginData.xlsx");
-		Workbook wb1 = WorkbookFactory.create(f1);
-		String mobileNum = NumberToTextConverter.toText((wb1.getSheet("LoginDetails").getRow(1).getCell(0).getNumericCellValue()));
-//		SignIn_EmailPage dt = new SignIn_EmailPage(driver);
-//		System.out.println(getMobileNum1());
-		UserName_Elmnt.sendKeys(mobileNum);
+		UserName_Elmnt.sendKeys(mobileNum1);
+	}
+	public void UserName_Ymn() throws EncryptedDocumentException, IOException
+	{
+		UserName_Elmnt.sendKeys(mobileNum_Ymn);
 	}
 	public void InValid_UserName() throws EncryptedDocumentException, IOException
 	{
-		FileInputStream f1 = new FileInputStream("C:\\Users\\nandr\\eclipse-workspace\\ExcelDataSheet\\AmazonLoginData.xlsx");
-		Workbook wb1 = WorkbookFactory.create(f1);
-		String mobileNum = NumberToTextConverter.toText((wb1.getSheet("LoginDetails").getRow(2).getCell(0).getNumericCellValue()));
-		UserName_Elmnt.sendKeys(mobileNum);
+		UserName_Elmnt.sendKeys(mobileNum1_invald);
 	}
 	
 	public void Continue_Click()
