@@ -10,7 +10,7 @@ import org.apache.poi.ss.util.NumberToTextConverter;
 
 public class DDT_Class 
 {
-	public static String mobileNum1, password1, mobileNum1_invald, password1_invld, SearchProd_Shoe, SearchProd_Pen, mobileNum_Ymn, password_Ymn;
+	public static String mobileNum1, password1, mobileNum1_invald, password1_invld, SearchProd_Shoe, SearchProd_Pen, mobileNum_Ymn, password_Ymn, CardNumber, cvv;
 	public void UserName() throws EncryptedDocumentException, IOException
 	{
 		FileInputStream f1 = new FileInputStream("C:\\Users\\nandr\\eclipse-workspace\\ExcelDataSheet\\AmazonLoginData.xlsx");
@@ -30,6 +30,14 @@ public class DDT_Class
 		Workbook wb1 = WorkbookFactory.create(f1);
 		SearchProd_Shoe = wb1.getSheet("SearchProducts_List").getRow(1).getCell(0).getStringCellValue();
 		SearchProd_Pen = wb1.getSheet("SearchProducts_List").getRow(2).getCell(0).getStringCellValue();
+		 
+	}	
+	public void CreditCardDetails() throws EncryptedDocumentException, IOException
+	{
+		FileInputStream f1 = new FileInputStream("C:\\Users\\nandr\\eclipse-workspace\\ExcelDataSheet\\AmazonLoginData.xlsx");
+		Workbook wb1 = WorkbookFactory.create(f1);
+		CardNumber = (wb1.getSheet("CardDetails").getRow(1).getCell(0).getStringCellValue());
+		cvv = NumberToTextConverter.toText((wb1.getSheet("CardDetails").getRow(1).getCell(1).getNumericCellValue()));
 		 
 	}	
 	

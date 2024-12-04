@@ -58,5 +58,10 @@ public class TestCase14  extends Browser_Launch_Quit
 		// ----------------- check if "Submitted" alert displayed -----------
 		Assert.assertEquals(ordrPg.Review_Submission_Alert.isDisplayed(), true);
 		
+		// ------------------ SingOut -------
+		hmPg.acAndList(driver);
+		hmPg.Sign_Out();
+		
+		
 	}
 }

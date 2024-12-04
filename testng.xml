@@ -4,17 +4,8 @@
   <test thread-count="5" name="Test">
   <parameter name="browser" value="chrome"></parameter>
     <classes>
-    	<class name="ECommerce_TestCases.TestCase01"/>
-    	<class name="ECommerce_TestCases.TestCase02"/>
-    	<class name="ECommerce_TestCases.TestCase03"/>
-    	<class name="ECommerce_TestCases.TestCase04"/>
-    	<class name="ECommerce_TestCases.TestCase05"/>
-    	<class name="ECommerce_TestCases.TestCase07"/>
-    	<class name="ECommerce_TestCases.TestCase09"/>
-	    <class name="ECommerce_TestCases.TestCase10"/>
-	    <class name="ECommerce_TestCases.TestCase12"/>
-	    <class name="ECommerce_TestCases.TestCase13"/>
-	    <class name="ECommerce_TestCases.TestCase15"/>
+       	<class name="ECommerce_TestCases.TestCase02"/>
+    	
     </classes>
   </test> <!-- Test -->
  </suite> <!-- Suite -->

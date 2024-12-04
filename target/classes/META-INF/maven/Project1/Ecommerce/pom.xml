@@ -47,11 +47,7 @@
 		    <version>5.2.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>Maven_Project1</groupId>
-			<artifactId>package1</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		
   </dependencies>
 
   <build>

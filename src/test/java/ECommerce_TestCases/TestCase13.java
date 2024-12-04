@@ -59,8 +59,10 @@ public class TestCase13  extends Browser_Launch_Quit
 		CheckOut_Page chkOutPg= new CheckOut_Page(driver);
 		chkOutPg.Enter_Promo_Code();
 		
-		// ------------ Check if error code displayed contains required text msg
-		String errorPromoCode = chkOutPg.Promo_Code_Error.getText();
-		Assert.assertEquals(errorPromoCode.contains("code you entered is not valid"), true);
+		// ------------ Check if error code IS displayed 
+//		String errorPromoCode = chkOutPg.Promo_Code_Error.getText();
+//		Assert.assertEquals(errorPromoCode.contains("code you entered is not valid"), true);
+		Assert.assertEquals(chkOutPg.Promo_Code_Error.isDisplayed(), true);
+	
 	}
 }

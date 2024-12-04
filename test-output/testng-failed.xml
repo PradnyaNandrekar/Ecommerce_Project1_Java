@@ -4,24 +4,6 @@
   <test thread-count="5" parallel="tests" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="ECommerce_TestCases.TestCase01">
-        <methods>
-          <include name="User_Registration_Test"/>
-          <include name="Launch_Amazon"/>
-        </methods>
-      </class> <!-- ECommerce_TestCases.TestCase01 -->
-      <class name="ECommerce_TestCases.TestCase04">
-        <methods>
-          <include name="Edit_info_from_LoginSecurity"/>
-          <include name="Launch_Amazon"/>
-        </methods>
-      </class> <!-- ECommerce_TestCases.TestCase04 -->
-      <class name="ECommerce_TestCases.TestCase03">
-        <methods>
-          <include name="SignIn_Invalid_UN"/>
-          <include name="Launch_Amazon"/>
-        </methods>
-      </class> <!-- ECommerce_TestCases.TestCase03 -->
       <class name="ECommerce_TestCases.TestCase12">
         <methods>
           <include name="Launch_Amazon"/>

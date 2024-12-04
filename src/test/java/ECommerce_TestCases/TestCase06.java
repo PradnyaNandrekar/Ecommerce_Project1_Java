@@ -23,7 +23,7 @@ public class TestCase06 extends Browser_Launch_Quit
 		ddt.SerachProduct();
 		// -------------------- Search Product 
 		HomePage hmPg = new HomePage(driver);
-		hmPg.searchProd_pen();
+		hmPg.searchProd_shoe();
 		//--------------------- select price range by using price slider 
 		Product_ListPage prodList = new Product_ListPage(driver);
 		prodList.slider_PriceRange_Set();  // not working.. No Such Element 

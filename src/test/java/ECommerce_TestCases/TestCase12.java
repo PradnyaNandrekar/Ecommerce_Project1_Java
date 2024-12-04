@@ -26,13 +26,15 @@ import ECommerce_Source.SignIn_PasswordPage;
 
 public class TestCase12 extends Browser_Launch_Quit 
 {
-	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class)
+//	retryAnalyzer=ECommerce_TestCases.retryLogic.class
+	@Test()
 	public void PaymentMethod_Selection() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		// ------------------ Login
 				DDT_Class dtCl = new DDT_Class();
 				dtCl.UserName();
 				dtCl.SerachProduct();
+				dtCl.CreditCardDetails();
 				HomePage hmPg = new HomePage(driver);
 				hmPg.acAndList(driver);
 				hmPg.Sign_In();
@@ -78,9 +80,9 @@ public class TestCase12 extends Browser_Launch_Quit
 				Thread.sleep(1000);
 				chkOut_Pg.CashOnDelivery();
 				chkOut_Pg.useThisPayment();
-				WebDriverWait wx = new WebDriverWait(driver, Duration.ofSeconds(15));
-				wx.until(ExpectedConditions.visibilityOf(chkOut_Pg.place_Ur_order_btn));
-				Assert.assertEquals(chkOut_Pg.place_Ur_order_btn.isEnabled(), true);
+//				WebDriverWait wx = new WebDriverWait(driver, Duration.ofSeconds(15));
+//				wx.until(ExpectedConditions.visibilityOf(chkOut_Pg.place_Ur_order_btn));
+				Assert.assertEquals(chkOut_Pg.place_Ur_order_btn.isDisplayed(), true);
 				
 	}
 

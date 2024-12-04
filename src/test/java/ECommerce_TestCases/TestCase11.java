@@ -29,7 +29,7 @@ public class TestCase11 extends Browser_Launch_Quit
 	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class, enabled=false)
 	public void CheckOutProcess_NetBanking_Method() throws EncryptedDocumentException, IOException
 	{
-		// login
+		// ------------------- login
 		DDT_Class dtCl = new DDT_Class();
 		dtCl.UserName();
 		dtCl.SerachProduct();
@@ -42,7 +42,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		SignIn_PasswordPage SnInPw= new SignIn_PasswordPage(driver);
 		SnInPw.Enter_Password();
 		SnInPw.SignIn_Submit();		
-		// Search and select product - and click buy now
+		//------------------- Search and select product - and click buy now
 		hmPg.searchProd_pen();
 		Product_ListPage prod_list = new Product_ListPage(driver);
 		prod_list.select_1st_Prod();
@@ -55,7 +55,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		
 		ProductPage prodPg= new ProductPage(driver);
 		prodPg.Buy_Now_Click();
-		// change address - select other address
+		// ------------------- change address - select other address
 		CheckOut_Page chkOutPg= new CheckOut_Page(driver);
 		
 		if(chkOutPg.change_Addr_Elmnt.isDisplayed())
@@ -72,12 +72,12 @@ public class TestCase11 extends Browser_Launch_Quit
 		w1.until(ExpectedConditions.visibilityOf(chkOutPg.dlvrThisAddr_Btn_Elmnt));
 		chkOutPg.DlvrToThisAddress();
 			
-		// select payment method
+		// ------------------- select payment method
 //		if(chkOutPg.change_paymentMode_Elmnt.isDisplayed()==true)
 //		{
 //			chkOutPg.changePaymentMode();
 //		}
-		// select - NetBanking mode ----
+		// select -------------------- NetBanking mode ----
 		chkOutPg.PayMentMode_NetBanking();
 		chkOutPg.SelectBank_NetBanking();
 		chkOutPg.useThisPayment();
@@ -105,7 +105,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		SignIn_PasswordPage SnInPw= new SignIn_PasswordPage(driver);
 		SnInPw.Enter_Password();
 		SnInPw.SignIn_Submit();		
-		// Search and select product - and click buy now
+		//  ------------------- Search and select product - and click buy now
 		hmPg.searchProd_pen();
 		Product_ListPage prod_list = new Product_ListPage(driver);
 		prod_list.select_1st_Prod();
@@ -120,7 +120,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		prodPg.Buy_Now_Click();
 		// ---------------- change address - select other address
 		CheckOut_Page chkOutPg= new CheckOut_Page(driver);
-		
+/*		
 		if(chkOutPg.change_Addr_Elmnt.isDisplayed())
 		{
 			chkOutPg.changeAddress();
@@ -134,9 +134,17 @@ public class TestCase11 extends Browser_Launch_Quit
 			catch(NoSuchElementException ex)
 			{
 				System.out.println("NoSuchElementException ----------- handled");
+				
 				WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(10));
 				w1.until(ExpectedConditions.visibilityOf(chkOutPg.dlvrThisAddr_Btn_Elmnt));
-				chkOutPg.DlvrToThisAddress();
+				try
+				{
+					chkOutPg.DlvrToThisAddress();
+				}
+				catch(ElementClickInterceptedException ex1)
+				{
+					chkOutPg.DlvrToThisAddress();
+				}
 			}
 			
 		}
@@ -146,15 +154,16 @@ public class TestCase11 extends Browser_Launch_Quit
 			w1.until(ExpectedConditions.visibilityOf(chkOutPg.dlvrThisAddr_Btn_Elmnt));
 			chkOutPg.DlvrToThisAddress();
 		}
-
+*/
 		// -------------------- change Payment method 
-		try {
+		try 
+		{
 			if(chkOutPg.change_paymentMode_Elmnt.isDisplayed())
 			{
 				chkOutPg.changePaymentMode();
 			}
 		} 
-		catch(ElementClickInterceptedException es)
+		catch(NoSuchElementException es)
 		{
 			// select - cash on delivery mode ---- click on Use THis Payment btn
 			WebDriverWait w2 = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -169,7 +178,8 @@ public class TestCase11 extends Browser_Launch_Quit
 					chkOutPg.OtherUPIApps_Payment();
 				}
 		}
-		
+		WebDriverWait w2 = new WebDriverWait(driver, Duration.ofSeconds(10));
+		w2.until(ExpectedConditions.visibilityOf(chkOutPg.UseThisPayment_Btn_Elmnt));
 		chkOutPg.useThisPayment();
 
 		//  ------------------ check product review block is displayed ---

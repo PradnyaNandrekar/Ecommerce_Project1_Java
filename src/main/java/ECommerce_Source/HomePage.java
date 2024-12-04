@@ -20,6 +20,9 @@ public class HomePage extends DDT_Class
 	@FindBy(xpath="(//a[.='Sign in'])[1]")
 	WebElement Sign_In_Elmnt;
 	
+	@FindBy(xpath="//a[@id='nav-item-signout']")
+	WebElement Sign_Out_Elmnt;
+	
 	@FindBy(id="nav-cart-count-container")
 	WebElement cart_Elmnt;
 	
@@ -69,6 +72,12 @@ public class HomePage extends DDT_Class
 	{
 		Sign_In_Elmnt.click();
 	}
+	
+	public void Sign_Out()
+	{
+		Sign_Out_Elmnt.click();
+	}
+	
 	public void View_mngProfile()
 	{
 //		Actions a1 = new Actions(driver);

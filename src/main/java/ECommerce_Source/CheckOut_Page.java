@@ -3,6 +3,7 @@ package ECommerce_Source;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CheckOut_Page 
+public class CheckOut_Page extends DDT_Class
 
 {
 	@FindBy(xpath="//span[.=' Another payment method']")
@@ -29,6 +30,7 @@ public class CheckOut_Page
 	public WebElement rdo_Btn_Addr_Elmnt;
 //	"(//input[@name='submissionURL'])[2]"
 //	"((//div[@class='a-box-inner'])[1]/fieldset/div)[2]"
+	//"//div[@id='shipping-address-selection-panel']/fieldset/div[2]/div[2]/span/div/label/i"
 	
 	@FindBy(xpath="(//input[@class='a-button-input'])[2]")
 	public WebElement Use_This_Address_btn;
@@ -47,17 +49,23 @@ public class CheckOut_Page
 	@FindBy(xpath="(//div[@class='a-radio a-spacing-top-mini'])")
 	WebElement NetBanking_Elmnt;
 	
-	@FindBy(xpath="((//div[@class='a-radio']))[3]")
+	@FindBy(xpath="((//div[@class='a-fixed-left-grid-col a-col-left'])/div/label/input)[1]")
 	WebElement Other_UPI_Apps_Elmnt;
-		
-	@FindBy(xpath="(//input[@name='ppw-instrumentRowSelection'])[5]")
+//	"((//div[@class='a-fixed-left-grid-col a-col-left'])/div/label/input)[1]"
+//	"((//div[@class='a-radio']))[3]"
+	
+	@FindBy(xpath="((//div[@class='a-fixed-left-grid-col a-col-left'])/div/label/input)[2]")
 	public WebElement cashOnDlvry_Elmnt;
+
+//	"(//input[@name='ppw-instrumentRowSelection'])[5]"
 	
 	@FindBy(name="ppw-bankSelection_dropdown")
 	WebElement SelectBankDropDown_Options;
 	
 	@FindBy(xpath="//span[@id='checkout-primary-continue-button-id']/span")
 	public WebElement UseThisPayment_Btn_Elmnt;
+	// "(//span[.='Use this payment method'])[3]"
+	//"//span[@id='checkout-primary-continue-button-id']/span"
 	
 	@FindBy(xpath="(//input[@name='placeYourOrder1'])[1]")
 	public WebElement place_Ur_order_btn;
@@ -139,7 +147,14 @@ public class CheckOut_Page
 	
 	public void useThisPayment()
 	{
-		UseThisPayment_Btn_Elmnt.click();
+		try
+		{
+			UseThisPayment_Btn_Elmnt.click();
+		}
+		catch(ElementClickInterceptedException ex2)
+		{
+			UseThisPayment_Btn_Elmnt.click();
+		}
 	}
 	
 	public void changePaymentMode()
@@ -167,7 +182,7 @@ public class CheckOut_Page
 		w1.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(debt_Crdt_Card_iFrame1));
 		try
 		{
-			debt_Crd_num.sendKeys("4160211505305772");
+			debt_Crd_num.sendKeys(CardNumber);
 			Select slct1 = new Select(debt_Crd_ExpMnth);
 			slct1.selectByValue("12");
 			Select slct2 = new Select(debt_Crd_ExpYear);
@@ -183,7 +198,7 @@ public class CheckOut_Page
 			w2.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(debt_Crdt_Card_iFrame2));
 			try
 			{
-				debt_Crd_CVV_TextBox.sendKeys("250");
+				debt_Crd_CVV_TextBox.sendKeys(cvv);
 			}
 			catch (NoSuchElementException ex)
 			{
@@ -222,7 +237,15 @@ public class CheckOut_Page
 	
 	public void CashOnDelivery() 
 	{
-		cashOnDlvry_Elmnt.click();
+		try
+		{
+			cashOnDlvry_Elmnt.click();
+		}
+		catch(ElementClickInterceptedException ex)
+		{
+			cashOnDlvry_Elmnt.click();
+			System.out.println("ElementClickInterceptedException ------- handled");
+		}
 	}
 	
 	public CheckOut_Page(WebDriver driver)
