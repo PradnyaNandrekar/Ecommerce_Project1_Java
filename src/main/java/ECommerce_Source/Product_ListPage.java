@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,7 +42,7 @@ public class Product_ListPage
 	@FindBy(xpath="//span[@class='a-price-whole']")
 	public List<WebElement> all_Prod_price_Elmnt;
 	
-	@FindBy(xpath="//i[@class='a-icon a-icon-star-small a-star-small-4']/span")
+	@FindBy(xpath="//a[@class='a-popover-trigger a-declarative']/i/span")
 	public List<WebElement> all_Prod_rating_Elmnt;
 	
 //	@FindBy(xpath="//span[@class='a-button-text a-declarative']")
@@ -87,10 +88,14 @@ public class Product_ListPage
 	@FindBy(xpath="//div[@class='a-row a-size-base a-color-base']/div/span[2]")
 	List<WebElement> ProductDescription_Discount_shoes;
 
+	@FindBy(xpath="(//h2[@id='acr-popover-title']/span)[9]")
+	WebElement each_Prod_rating;
+	
 	
 	public void select_1st_Prod()
 	{
 		prod_1st_Elmnt.click();
+		
 	}
 	/*public void all_CategoryList()
 	{
@@ -259,8 +264,9 @@ public class Product_ListPage
 				{
 					System.out.println("NumberFormatException handled");
 				}
+				
 		}
-		
+		System.out.println("Default List of Price - "+ l1);
 	}
 	
 //	public void sort_DropDwn_click_mthd()
@@ -277,14 +283,19 @@ public class Product_ListPage
 		Select s1 = new Select(sort_dropdown);
 		s1.selectByVisibleText("Price: High to Low");
 	}
-	public void ratings_list()
+	public void ratings_list() throws InterruptedException
 	{
+		Actions a1 = new Actions(driver);
+		
 		System.out.println("Size of ratings List -> "+ all_Prod_rating_Elmnt.size());
 		for(int i=0; i<all_Prod_rating_Elmnt.size(); i++)
 		{
-			WebElement rating_elmnt = all_Prod_rating_Elmnt.get(i);
-			String rating = rating_elmnt.getText();
+			all_Prod_rating_Elmnt.get(i).click();
+			each_Prod_rating.click();
+//			WebElement rating_elmnt = all_Prod_rating_Elmnt.get(i);
+			String rating = each_Prod_rating.getText();
 			System.out.println("rating = "+rating);
+			Thread.sleep(5000);
 		}
 	}
 	

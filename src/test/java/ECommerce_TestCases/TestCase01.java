@@ -31,7 +31,7 @@ public class TestCase01 extends Browser_Launch_Quit
 		RgPg.Verify_Mob_Click();
 		// ---------- Check if alertBox contains "account already exists" text
 		Assert.assertEquals(RgPg.oldUser_Alert.getText().contains("account already exists"), true);
-		// "account already exists"
+		
 		
 	}
 }

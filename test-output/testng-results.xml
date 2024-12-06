@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results retried="4" ignored="5" total="24" passed="11" failed="4" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
     <line>
       <![CDATA[Test Started]]>
     </line>
@@ -10,13 +16,108 @@
     <line>
       <![CDATA[Test Passed successfuly]]>
     </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[There was a problem
+Your password is incorrect]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Incorrect phone number
+We cannot find an account with that mobile number]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[----------- Filter By Brand Test Pass -----------]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[----------- Filter By Brand Test Pass -----------]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[All Product Details are present]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
+    <line>
+      <![CDATA[Test Started]]>
+    </line>
+    <line>
+      <![CDATA[Test Passed successfuly]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-12-04T19:11:40 IST" name="Suite" finished-at="2024-12-04T19:11:55 IST" duration-ms="14492">
+  <suite started-at="2024-12-06T23:22:27 IST" name="Suite" finished-at="2024-12-06T23:28:12 IST" duration-ms="344102">
     <groups>
     </groups>
-    <test started-at="2024-12-04T19:11:40 IST" name="Test" finished-at="2024-12-04T19:11:55 IST" duration-ms="14492">
-      <class name="ECommerce_TestCases.TestCase02">
-        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase02@506ae4d4]" started-at="2024-12-04T19:11:40 IST" name="Launch_Amazon" finished-at="2024-12-04T19:11:46 IST" duration-ms="5935" status="PASS">
+    <test started-at="2024-12-06T23:22:27 IST" name="Test" finished-at="2024-12-06T23:28:12 IST" duration-ms="344102">
+      <class name="ECommerce_TestCases.TestCase09">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase09@2af004b]" started-at="2024-12-06T23:24:32 IST" name="Launch_Amazon" finished-at="2024-12-06T23:24:36 IST" duration-ms="3673" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +128,471 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launch_Amazon -->
-        <test-method signature="SignIn()[pri:0, instance:ECommerce_TestCases.TestCase02@506ae4d4]" started-at="2024-12-04T19:11:46 IST" name="SignIn" finished-at="2024-12-04T19:11:55 IST" duration-ms="8493" status="PASS">
+        <test-method signature="AddToCartTest_ProdctDeatils_Pg()[pri:0, instance:ECommerce_TestCases.TestCase09@2af004b]" started-at="2024-12-06T23:24:36 IST" name="AddToCartTest_ProdctDeatils_Pg" finished-at="2024-12-06T23:24:49 IST" duration-ms="13197" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddToCartTest_ProdctDeatils_Pg -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase09@2af004b]" started-at="2024-12-06T23:24:49 IST" name="Quit_Amazon" finished-at="2024-12-06T23:24:49 IST" duration-ms="344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase09 -->
+      <class name="ECommerce_TestCases.TestCase07">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase07@27406a17]" started-at="2024-12-06T23:24:20 IST" name="Launch_Amazon" finished-at="2024-12-06T23:24:24 IST" duration-ms="3238" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="product_Info()[pri:0, instance:ECommerce_TestCases.TestCase07@27406a17]" started-at="2024-12-06T23:24:24 IST" name="product_Info" finished-at="2024-12-06T23:24:32 IST" duration-ms="8042" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[All Product Details are present]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- product_Info -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase07@27406a17]" started-at="2024-12-06T23:24:32 IST" name="Quit_Amazon" finished-at="2024-12-06T23:24:32 IST" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase07 -->
+      <class name="ECommerce_TestCases.TestCase06">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase06@76b1e9b8]" started-at="2024-12-06T23:23:44 IST" name="Launch_Amazon" finished-at="2024-12-06T23:23:47 IST" duration-ms="3423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method retried="true" signature="searching_Wt_Filters()[pri:0, instance:ECommerce_TestCases.TestCase06@76b1e9b8]" started-at="2024-12-06T23:23:47 IST" name="searching_Wt_Filters" finished-at="2024-12-06T23:24:02 IST" duration-ms="15202" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[filtered product list has wrong discount product expected [0] but found [5]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: filtered product list has wrong discount product expected [0] but found [5]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at ECommerce_TestCases.TestCase06.searching_Wt_Filters(TestCase06.java:53)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[----------- Filter By Brand Test Pass -----------]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searching_Wt_Filters -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase06@76b1e9b8]" started-at="2024-12-06T23:24:02 IST" name="Quit_Amazon" finished-at="2024-12-06T23:24:03 IST" duration-ms="280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase06@76b1e9b8]" started-at="2024-12-06T23:24:03 IST" name="Launch_Amazon" finished-at="2024-12-06T23:24:06 IST" duration-ms="3786" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="searching_Wt_Filters()[pri:0, instance:ECommerce_TestCases.TestCase06@76b1e9b8]" started-at="2024-12-06T23:24:06 IST" name="searching_Wt_Filters" finished-at="2024-12-06T23:24:20 IST" duration-ms="13791" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[filtered product list has wrong discount product expected [0] but found [5]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: filtered product list has wrong discount product expected [0] but found [5]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at ECommerce_TestCases.TestCase06.searching_Wt_Filters(TestCase06.java:53)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[----------- Filter By Brand Test Pass -----------]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searching_Wt_Filters -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase06@76b1e9b8]" started-at="2024-12-06T23:24:20 IST" name="Quit_Amazon" finished-at="2024-12-06T23:24:20 IST" duration-ms="277" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase06 -->
+      <class name="ECommerce_TestCases.TestCase05">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase05@17f62e33]" started-at="2024-12-06T23:23:35 IST" name="Launch_Amazon" finished-at="2024-12-06T23:23:39 IST" duration-ms="3976" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="SearchProduct_Test()[pri:0, instance:ECommerce_TestCases.TestCase05@17f62e33]" started-at="2024-12-06T23:23:39 IST" name="SearchProduct_Test" finished-at="2024-12-06T23:23:43 IST" duration-ms="4597" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SearchProduct_Test -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase05@17f62e33]" started-at="2024-12-06T23:23:43 IST" name="Quit_Amazon" finished-at="2024-12-06T23:23:44 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase05 -->
+      <class name="ECommerce_TestCases.TestCase15">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase15@543295b0]" started-at="2024-12-06T23:27:55 IST" name="Launch_Amazon" finished-at="2024-12-06T23:27:58 IST" duration-ms="3331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="Reach_To_Cart_Test()[pri:0, instance:ECommerce_TestCases.TestCase15@543295b0]" started-at="2024-12-06T23:27:58 IST" name="Reach_To_Cart_Test" finished-at="2024-12-06T23:28:11 IST" duration-ms="13289" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Reach_To_Cart_Test -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase15@543295b0]" started-at="2024-12-06T23:28:11 IST" name="Quit_Amazon" finished-at="2024-12-06T23:28:12 IST" duration-ms="264" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase15 -->
+      <class name="ECommerce_TestCases.TestCase04">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase04@74ea2410]" started-at="2024-12-06T23:23:21 IST" name="Launch_Amazon" finished-at="2024-12-06T23:23:24 IST" duration-ms="3655" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="Edit_info_from_LoginSecurity()[pri:0, instance:ECommerce_TestCases.TestCase04@74ea2410]" started-at="2024-12-06T23:23:24 IST" name="Edit_info_from_LoginSecurity" finished-at="2024-12-06T23:23:35 IST" duration-ms="10125" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Edit_info_from_LoginSecurity -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase04@74ea2410]" started-at="2024-12-06T23:23:35 IST" name="Quit_Amazon" finished-at="2024-12-06T23:23:35 IST" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase04 -->
+      <class name="ECommerce_TestCases.TestCase03">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase03@25ce9dc4]" started-at="2024-12-06T23:23:08 IST" name="Launch_Amazon" finished-at="2024-12-06T23:23:11 IST" duration-ms="3238" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="SignIn_Invalid_Password()[pri:0, instance:ECommerce_TestCases.TestCase03@25ce9dc4]" started-at="2024-12-06T23:23:11 IST" name="SignIn_Invalid_Password" finished-at="2024-12-06T23:23:15 IST" duration-ms="3702" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[There was a problem
+Your password is incorrect]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SignIn_Invalid_Password -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase03@25ce9dc4]" started-at="2024-12-06T23:23:15 IST" name="Quit_Amazon" finished-at="2024-12-06T23:23:15 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase03@25ce9dc4]" started-at="2024-12-06T23:23:15 IST" name="Launch_Amazon" finished-at="2024-12-06T23:23:19 IST" duration-ms="3779" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="SignIn_Invalid_UN()[pri:0, instance:ECommerce_TestCases.TestCase03@25ce9dc4]" started-at="2024-12-06T23:23:19 IST" name="SignIn_Invalid_UN" finished-at="2024-12-06T23:23:21 IST" duration-ms="1902" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Incorrect phone number
+We cannot find an account with that mobile number]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- SignIn_Invalid_UN -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase03@25ce9dc4]" started-at="2024-12-06T23:23:21 IST" name="Quit_Amazon" finished-at="2024-12-06T23:23:21 IST" duration-ms="221" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase03 -->
+      <class name="ECommerce_TestCases.TestCase14">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase14@563f38c4]" started-at="2024-12-06T23:27:17 IST" name="Launch_Amazon" finished-at="2024-12-06T23:27:21 IST" duration-ms="3834" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method retried="true" signature="WriteReviews()[pri:0, instance:ECommerce_TestCases.TestCase14@563f38c4]" started-at="2024-12-06T23:27:21 IST" name="WriteReviews" finished-at="2024-12-06T23:27:37 IST" duration-ms="16110" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#time\-filter"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0797b2cecda7e1b7e84c972bf310977d, findElement {using=id, value=time-filter}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55321}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55321/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0797b2cecda7e1b7e84c972bf310977d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#time\-filter"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0797b2cecda7e1b7e84c972bf310977d, findElement {using=id, value=time-filter}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55321}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55321/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0797b2cecda7e1b7e84c972bf310977d
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.getTagName(Unknown Source)
+at org.openqa.selenium.support.ui.Select.<init>(Select.java:43)
+at ECommerce_Source.YourOrdersPage.Select_Time_Filter(YourOrdersPage.java:30)
+at ECommerce_TestCases.TestCase14.WriteReviews(TestCase14.java:44)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- WriteReviews -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase14@563f38c4]" started-at="2024-12-06T23:27:37 IST" name="Quit_Amazon" finished-at="2024-12-06T23:27:37 IST" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase14@563f38c4]" started-at="2024-12-06T23:27:37 IST" name="Launch_Amazon" finished-at="2024-12-06T23:27:40 IST" duration-ms="2933" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="WriteReviews()[pri:0, instance:ECommerce_TestCases.TestCase14@563f38c4]" started-at="2024-12-06T23:27:40 IST" name="WriteReviews" finished-at="2024-12-06T23:27:54 IST" duration-ms="14577" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- WriteReviews -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase14@563f38c4]" started-at="2024-12-06T23:27:54 IST" name="Quit_Amazon" finished-at="2024-12-06T23:27:55 IST" duration-ms="261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase14 -->
+      <class name="ECommerce_TestCases.TestCase13">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase13@3e8c3cb]" started-at="2024-12-06T23:26:54 IST" name="Launch_Amazon" finished-at="2024-12-06T23:26:58 IST" duration-ms="4047" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="CheckOutProcess_Enter_PromoCode()[pri:0, instance:ECommerce_TestCases.TestCase13@3e8c3cb]" started-at="2024-12-06T23:26:58 IST" name="CheckOutProcess_Enter_PromoCode" finished-at="2024-12-06T23:27:16 IST" duration-ms="17967" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckOutProcess_Enter_PromoCode -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase13@3e8c3cb]" started-at="2024-12-06T23:27:16 IST" name="Quit_Amazon" finished-at="2024-12-06T23:27:17 IST" duration-ms="348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase13 -->
+      <class name="ECommerce_TestCases.TestCase02">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase02@173ed316]" started-at="2024-12-06T23:22:59 IST" name="Launch_Amazon" finished-at="2024-12-06T23:23:02 IST" duration-ms="3362" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="SignIn()[pri:0, instance:ECommerce_TestCases.TestCase02@173ed316]" started-at="2024-12-06T23:23:02 IST" name="SignIn" finished-at="2024-12-06T23:23:08 IST" duration-ms="5114" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Started]]>
@@ -40,7 +605,476 @@
             </line>
           </reporter-output>
         </test-method> <!-- SignIn -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase02@173ed316]" started-at="2024-12-06T23:23:08 IST" name="Quit_Amazon" finished-at="2024-12-06T23:23:08 IST" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
       </class> <!-- ECommerce_TestCases.TestCase02 -->
+      <class name="ECommerce_TestCases.TestCase12">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase12@793f29ff]" started-at="2024-12-06T23:26:15 IST" name="Launch_Amazon" finished-at="2024-12-06T23:26:19 IST" duration-ms="3604" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="PaymentMethod_Selection()[pri:0, instance:ECommerce_TestCases.TestCase12@793f29ff]" started-at="2024-12-06T23:26:19 IST" name="PaymentMethod_Selection" finished-at="2024-12-06T23:26:54 IST" duration-ms="35641" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+            <line>
+              <![CDATA[Test Passed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- PaymentMethod_Selection -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase12@793f29ff]" started-at="2024-12-06T23:26:54 IST" name="Quit_Amazon" finished-at="2024-12-06T23:26:54 IST" duration-ms="272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase12 -->
+      <class name="ECommerce_TestCases.TestCase01">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase01@69e153c5]" started-at="2024-12-06T23:22:28 IST" name="Launch_Amazon" finished-at="2024-12-06T23:22:32 IST" duration-ms="4553" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method retried="true" signature="User_Registration_Test()[pri:0, instance:ECommerce_TestCases.TestCase01@69e153c5]" started-at="2024-12-06T23:22:32 IST" name="User_Registration_Test" finished-at="2024-12-06T23:22:42 IST" duration-ms="10394" status="SKIP">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69d34fc2d2bbb5e251ab3f65b502b05e, clickElement {id=f.16FAC47EA08F3C9FA9ACEAAA2CCA9BF6.d.A7790CE9C9D4F34B722DC967BF92579C.e.119}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53308}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53308/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (69d34fc2d2bbb5e251ab3f65b502b05e)] -> xpath: (//a[.='Start here.'])[1]]
+Session ID: 69d34fc2d2bbb5e251ab3f65b502b05e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69d34fc2d2bbb5e251ab3f65b502b05e, clickElement {id=f.16FAC47EA08F3C9FA9ACEAAA2CCA9BF6.d.A7790CE9C9D4F34B722DC967BF92579C.e.119}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53308}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53308/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (69d34fc2d2bbb5e251ab3f65b502b05e)] -> xpath: (//a[.='Start here.'])[1]]
+Session ID: 69d34fc2d2bbb5e251ab3f65b502b05e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at ECommerce_Source.HomePage.startHere_Click(HomePage.java:57)
+at ECommerce_TestCases.TestCase01.User_Registration_Test(TestCase01.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- User_Registration_Test -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase01@69e153c5]" started-at="2024-12-06T23:22:42 IST" name="Quit_Amazon" finished-at="2024-12-06T23:22:43 IST" duration-ms="212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase01@69e153c5]" started-at="2024-12-06T23:22:43 IST" name="Launch_Amazon" finished-at="2024-12-06T23:22:46 IST" duration-ms="3636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="User_Registration_Test()[pri:0, instance:ECommerce_TestCases.TestCase01@69e153c5]" started-at="2024-12-06T23:22:46 IST" name="User_Registration_Test" finished-at="2024-12-06T23:22:59 IST" duration-ms="12540" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='a-box-inner a-alert-container']/div)[1]"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e917ae76d71426b3f965c6b372678b9, findElement {using=xpath, value=(//div[@class='a-box-inner a-alert-container']/div)[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53418/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e917ae76d71426b3f965c6b372678b9]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='a-box-inner a-alert-container']/div)[1]"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e917ae76d71426b3f965c6b372678b9, findElement {using=xpath, value=(//div[@class='a-box-inner a-alert-container']/div)[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53418/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e917ae76d71426b3f965c6b372678b9
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.getText(Unknown Source)
+at ECommerce_TestCases.TestCase01.User_Registration_Test(TestCase01.java:33)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- User_Registration_Test -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase01@69e153c5]" started-at="2024-12-06T23:22:59 IST" name="Quit_Amazon" finished-at="2024-12-06T23:22:59 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase01 -->
+      <class name="ECommerce_TestCases.TestCase10">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase10@248e319b]" started-at="2024-12-06T23:24:49 IST" name="Launch_Amazon" finished-at="2024-12-06T23:24:52 IST" duration-ms="2922" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method retried="true" signature="cartUpdateTest()[pri:0, instance:ECommerce_TestCases.TestCase10@248e319b]" started-at="2024-12-06T23:24:52 IST" name="cartUpdateTest" finished-at="2024-12-06T23:25:17 IST" duration-ms="24715" status="SKIP">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [10988e099a0e29cc7c744d8fb5933a56, clickElement {id=f.4DF3CB82A3F7278554B3ED874AD5B6E9.d.772BB99B2F77950C66FFEF87386D1B74.e.65}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54477}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54477/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (10988e099a0e29cc7c744d8fb5933a56)] -> id: add-to-cart-button]
+Session ID: 10988e099a0e29cc7c744d8fb5933a56]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [10988e099a0e29cc7c744d8fb5933a56, clickElement {id=f.4DF3CB82A3F7278554B3ED874AD5B6E9.d.772BB99B2F77950C66FFEF87386D1B74.e.65}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54477}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54477/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (10988e099a0e29cc7c744d8fb5933a56)] -> id: add-to-cart-button]
+Session ID: 10988e099a0e29cc7c744d8fb5933a56
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at ECommerce_Source.ProductPage.addTo_Cart(ProductPage.java:32)
+at ECommerce_TestCases.TestCase10.cartUpdateTest(TestCase10.java:54)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- cartUpdateTest -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase10@248e319b]" started-at="2024-12-06T23:25:17 IST" name="Quit_Amazon" finished-at="2024-12-06T23:25:17 IST" duration-ms="298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase10@248e319b]" started-at="2024-12-06T23:25:17 IST" name="Launch_Amazon" finished-at="2024-12-06T23:25:21 IST" duration-ms="3308" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="cartUpdateTest()[pri:0, instance:ECommerce_TestCases.TestCase10@248e319b]" started-at="2024-12-06T23:25:21 IST" name="cartUpdateTest" finished-at="2024-12-06T23:25:39 IST" duration-ms="18423" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91a96bcd72d22ec63d3282bc3d07b09e, clickElement {id=f.1FEE29088B9DFE375A7140BF19EF77FD.d.E84AD2DF9C492BBA11C5E48B408B4083.e.292}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54624}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54624/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (91a96bcd72d22ec63d3282bc3d07b09e)] -> xpath: //span[@class='a-icon a-icon-small-add']]
+Session ID: 91a96bcd72d22ec63d3282bc3d07b09e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91a96bcd72d22ec63d3282bc3d07b09e, clickElement {id=f.1FEE29088B9DFE375A7140BF19EF77FD.d.E84AD2DF9C492BBA11C5E48B408B4083.e.292}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54624}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54624/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (91a96bcd72d22ec63d3282bc3d07b09e)] -> xpath: //span[@class='a-icon a-icon-small-add']]
+Session ID: 91a96bcd72d22ec63d3282bc3d07b09e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+at ECommerce_Source.ShoppingCartPage.addQty(ShoppingCartPage.java:62)
+at ECommerce_TestCases.TestCase10.cartUpdateTest(TestCase10.java:66)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- cartUpdateTest -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase10@248e319b]" started-at="2024-12-06T23:25:39 IST" name="Quit_Amazon" finished-at="2024-12-06T23:25:39 IST" duration-ms="261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase10 -->
+      <class name="ECommerce_TestCases.TestCase11_trial">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase11_trial@5d0bf09b]" started-at="2024-12-06T23:25:39 IST" name="Launch_Amazon" finished-at="2024-12-06T23:25:43 IST" duration-ms="3568" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Launch_Amazon -->
+        <test-method signature="CheckOutProcess_CashOnDelivery_Method()[pri:0, instance:ECommerce_TestCases.TestCase11_trial@5d0bf09b]" started-at="2024-12-06T23:25:43 IST" name="CheckOutProcess_CashOnDelivery_Method" finished-at="2024-12-06T23:26:15 IST" duration-ms="31887" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"((//div[@class='a-fixed-left-grid-col a-col-left'])/div/label/input)[2]"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [745d356121c3fe62421249f765d6ae09, findElement {using=xpath, value=((//div[@class='a-fixed-left-grid-col a-col-left'])/div/label/input)[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54787}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54787/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 745d356121c3fe62421249f765d6ae09]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"((//div[@class='a-fixed-left-grid-col a-col-left'])/div/label/input)[2]"}
+  (Session info: chrome=131.0.6778.109)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [745d356121c3fe62421249f765d6ae09, findElement {using=xpath, value=((//div[@class='a-fixed-left-grid-col a-col-left'])/div/label/input)[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54787}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54787/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 745d356121c3fe62421249f765d6ae09
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at ECommerce_TestCases.TestCase11_trial.CheckOutProcess_CashOnDelivery_Method(TestCase11_trial.java:58)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[Test Started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CheckOutProcess_CashOnDelivery_Method -->
+        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase11_trial@5d0bf09b]" started-at="2024-12-06T23:26:15 IST" name="Quit_Amazon" finished-at="2024-12-06T23:26:15 IST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Quit_Amazon -->
+      </class> <!-- ECommerce_TestCases.TestCase11_trial -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -20,21 +20,25 @@ public class CheckOut_Page extends DDT_Class
 	@FindBy(xpath="//span[.=' Another payment method']")
 	public WebElement anothr_Pyment_method;
 
-	@FindBy(partialLinkText="Change")
+	@FindBy(xpath="//div[@id='checkout-deliveryAddressPanel']/div/div[2]/span")
 	public WebElement change_Addr_Elmnt;
+//	"//a[@id='addressChangeLinkId']"
+//	partialLinkText="Change"
 	
 	@FindBy(xpath="//a[@id='payChangeButtonId']")
 	public WebElement change_paymentMode_Elmnt;
 	
-	@FindBy(xpath="(//input[@name='submissionURL'])[2]")
+	@FindBy(xpath="//div[@class='a-box-inner']/fieldset/div[2]")
 	public WebElement rdo_Btn_Addr_Elmnt;
 //	"(//input[@name='submissionURL'])[2]"
 //	"((//div[@class='a-box-inner'])[1]/fieldset/div)[2]"
+//	"//div[@class='a-box-inner']/fieldset/div[2]"
 	//"//div[@id='shipping-address-selection-panel']/fieldset/div[2]/div[2]/span/div/label/i"
 	
-	@FindBy(xpath="(//input[@class='a-button-input'])[2]")
+	@FindBy(xpath="//span[@id='shipToThisAddressButton']")
 	public WebElement Use_This_Address_btn;
 //	"(//input[@class='a-button-input'])[2]"
+//	"//span[@id='shipToThisAddressButton']"
 	
 	@FindBy(xpath="//span[@id='checkout-primary-continue-button-id-announce']")
 	public WebElement dlvrThisAddr_Btn_Elmnt;
@@ -67,10 +71,10 @@ public class CheckOut_Page extends DDT_Class
 	// "(//span[.='Use this payment method'])[3]"
 	//"//span[@id='checkout-primary-continue-button-id']/span"
 	
-	@FindBy(xpath="(//input[@name='placeYourOrder1'])[1]")
+	@FindBy(xpath="//span[@id='submitOrderButtonId-announce']")
 	public WebElement place_Ur_order_btn;
-	
-	
+//	"//span[@id='submitOrderButtonId-announce']"
+//	"(//input[@name='placeYourOrder1'])[1]"
 	@FindBy(xpath="//div[@ID='spc-orders']")
 	public WebElement Review_items;
 	

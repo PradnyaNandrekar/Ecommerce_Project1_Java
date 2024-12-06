@@ -36,57 +36,57 @@ public class TestCase08 extends Browser_Launch_Quit
 //			driver.navigate().refresh();
 			System.out.println("Default List of Price - "+ prodList.l1);
 			//--------------------------------- sort list
-			Collections.sort(prodList.l1);
-			//------- add manually sorted values in "manuallySorted_l1_low_Hgh" list
-			List<Integer> manuallySorted_l1_low_Hgh = new ArrayList<Integer>();
-			manuallySorted_l1_low_Hgh.addAll(prodList.l1);
-			System.out.println("Manually sorted (Low-High) PriceList"+manuallySorted_l1_low_Hgh);
+			List<Integer> List2_Man_Sort = new ArrayList<Integer>();
+			List2_Man_Sort.addAll(prodList.l1);
+			Collections.sort(List2_Man_Sort);
+			System.out.println("Manually sorted (Low-High) PriceList"+List2_Man_Sort);
 			//---------------------------------  Select - select by - "Price Low to High"
+			System.out.println("bEFORE system_Sorted (Low-High) PriceList - " + prodList.l1);
 			prodList.sort_Price_LowTHigh();
-			driver.navigate().refresh();
-		
+//			driver.navigate().refresh();
+			WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+			w1.until(ExpectedConditions.visibilityOfAllElements(prodList.all_Prod_price_Elmnt));
 			//---------------------------------  get list of price 
 			prodList.price_List();
-			System.out.println("system_Sorted (Low-High) PriceList - "+prodList.l1);
+			System.out.println("system_Sorted (Low-High) PriceList - " + prodList.l1);
 			//---------------------------------  compare After sorting list1 and list2 
-			
-			Assert.assertEquals(prodList.l1, manuallySorted_l1_low_Hgh, "Sort By- price Low-High Failed..");
+			Assert.assertEquals(prodList.l1, List2_Man_Sort, "Sort By- price Low-High Failed..");
 			
 	}
 
 	@Test(enabled=true)
 	public void Sorting_Product_ByPrice_HtoL() throws InterruptedException, EncryptedDocumentException, IOException
 	{
-		DDT_Class ddt = new DDT_Class();
-		ddt.SerachProduct();
+			DDT_Class ddt = new DDT_Class();
+			ddt.SerachProduct();
 			//---------------------------------- search product
 			HomePage hmPg = new HomePage(driver);
 			hmPg.searchProd_shoe();
 			Product_ListPage prodList = new Product_ListPage(driver);
 			//--------------------------------- Get list of price
 			prodList.price_List();
-//			driver.navigate().refresh();
+	//		driver.navigate().refresh();
 			System.out.println("Default List of Price - "+ prodList.l1);
 			//--------------------------------- sort list
-			Collections.sort(prodList.l1);
-			//------- add manually sorted values in "manuallySorted_l1_low_Hgh" list
-			List<Integer> manuallySorted_l1_low_Hgh = new ArrayList<Integer>();
-			manuallySorted_l1_low_Hgh.addAll(prodList.l1);
-			System.out.println("Manually sorted (Low-High) PriceList"+manuallySorted_l1_low_Hgh);
-			//---------------------------------  Sort list manually reversed order
-			List<Integer> manuallySorted_l1_Hgh_Low = new ArrayList<Integer>();
-			for(int i=0, j=manuallySorted_l1_low_Hgh.size()-1; i<manuallySorted_l1_low_Hgh.size(); i++, j--)
+			List<Integer> List2_Man_Sort = new ArrayList<Integer>();
+			List2_Man_Sort.addAll(prodList.l1);
+			Collections.sort(List2_Man_Sort);
+			System.out.println("Manually sorted (Low-High) PriceList"+List2_Man_Sort);
+			//--------------------------------- Reverse manual sorted list 
+			List<Integer> List3_Man_Sort_Hgh_Low = new ArrayList<Integer>();
+			for(int i=0, j=List2_Man_Sort.size()-1; i<List2_Man_Sort.size(); i++, j--)
 			{
-				manuallySorted_l1_Hgh_Low.add(i, manuallySorted_l1_low_Hgh.get(j));
+				List3_Man_Sort_Hgh_Low.add(i, List2_Man_Sort.get(j));
 			}
-			System.out.println("Manually sorted (High-Low) PriceList"+manuallySorted_l1_Hgh_Low);
+			System.out.println("Manually sorted (High-Low) PriceList"+List3_Man_Sort_Hgh_Low);
 			//---------------------------------  Select - select by - "Price High to l"
+			System.out.println("Before system_Sorted (High-Low) PriceList - "+prodList.l1); // Getting same list as before sort. not getting refreshed list sorted H-L
 			prodList.sort_Price_HighTLow();
 			driver.navigate().refresh();
 			Thread.sleep(3000);
 			prodList.price_List();
 			System.out.println("system_Sorted (High-Low) PriceList - "+prodList.l1); // Getting same list as before sort. not getting refreshed list sorted H-L
-			Assert.assertEquals(prodList.l1, manuallySorted_l1_Hgh_Low, "Sort By- price High-Low Failed..");
+			Assert.assertEquals(prodList.l1, List3_Man_Sort_Hgh_Low, "Sort By- price High-Low Failed..");
 			
 	}
 	@Test(enabled=false)

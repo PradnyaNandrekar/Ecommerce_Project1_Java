@@ -53,32 +53,4 @@ public class TestCase06 extends Browser_Launch_Quit
 		Assert.assertEquals(prodList.wrongDiscountedProd_Count, 0, "filtered product list has wrong discount product");
 	}
 	
-	
-	
-	/*{
-deliveryRefinements
-p_n_size_browse-vebin/2022058031
-brandsRefinements
-priceRefinements
-p_n_size_two_browse-vebin/2022042031
-departments
-reviewsRefinements
-p_n_feature_nineteen_browse-bin/11301362031
-p_n_pct-off-with-tax/2665398031
-p_n_feature_twenty_browse-bin/49265298031
-p_n_feature_fourteen_browse-bin/29603785031
-p_n_feature_sixteen_browse-bin/38069012031
-p_n_intended_use_browse-bin/2022062031
-p_n_is_cod_eligible/4931670031
-p_n_date_first_available_absolute/1318486031
-p_n_feature_seventeen_browse-bin/41595444031
-p_6/1318474031
-p_n_feature_twenty-one_browse-bin/60620651031
-p_n_feature_twelve_browse-bin/29593843031
-p_n_feature_two_browse-bin/2022069031
-p_n_feature_eleven_browse-bin/2022034031
-p_n_feature_six_browse-bin/28095657031
-p_n_availability/1318483031
-
-}*/
 }
