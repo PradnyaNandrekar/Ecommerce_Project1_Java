@@ -32,7 +32,7 @@ public class TestCase03 extends Browser_Launch_Quit
 		SnInPg.Continue_Click();
 
 		Reporter.log(SignIn_EmailPage.Error_MsgBox_Elmnt.getText());	
-		Assert.assertEquals(SnInPg.UserName_Elmnt.isDisplayed(), true); 
+		Assert.assertEquals(SnInPg.UserName_Elmnt.isDisplayed(), true, "TestCase 03 - Failed"); 
 		
 	}
 	
@@ -68,7 +68,7 @@ public class TestCase03 extends Browser_Launch_Quit
 		}
 		finally
 		{
-			Assert.assertEquals(SnInPw.Password_Elmnt.isDisplayed(), true);
+			Assert.assertEquals(SnInPw.Password_Elmnt.isDisplayed(), true, "TestCase 03 - Failed");
 		}
 		
 		

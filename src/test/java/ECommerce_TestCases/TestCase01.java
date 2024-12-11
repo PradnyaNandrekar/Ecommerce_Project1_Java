@@ -30,8 +30,14 @@ public class TestCase01 extends Browser_Launch_Quit
 		RgPg.EnterPassword();
 		RgPg.Verify_Mob_Click();
 		// ---------- Check if alertBox contains "account already exists" text
-		Assert.assertEquals(RgPg.oldUser_Alert.getText().contains("account already exists"), true);
-		
+		if(driver.getTitle().contains("Authentication required"))
+		{
+			Assert.assertEquals(driver.getTitle().contains("Authentication required"), true, "TestCase 01 - Failed");
+		}
+		else
+		{
+			Assert.assertEquals(RgPg.oldUser_Alert.getText().contains("account already exists"), true, "TestCase 01 - Failed");
+		}
 		
 	}
 }

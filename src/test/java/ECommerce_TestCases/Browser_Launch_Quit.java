@@ -1,8 +1,6 @@
 package ECommerce_TestCases;
 
 import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,7 +14,6 @@ import ECommerce_Source.Listeners_Logic;
 @Listeners(ECommerce_Source.Listeners_Logic.class)
 public class Browser_Launch_Quit extends Listeners_Logic
 {
-	WebDriver driver;
 	@Parameters("browser")
 	@BeforeMethod()
 	public void Launch_Amazon(String Browser_Name)

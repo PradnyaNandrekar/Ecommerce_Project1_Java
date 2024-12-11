@@ -6,6 +6,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -18,11 +21,13 @@ import ECommerce_Source.ProductPage;
 import ECommerce_Source.Product_ListPage;
 import ECommerce_Source.SignIn_EmailPage;
 import ECommerce_Source.SignIn_PasswordPage;
+//Validate the entire checkout process, including address selection, 
+//payment method selection, and order review.
 
 public class TestCase11_trial extends Browser_Launch_Quit
 {
-	@Test
-	public void CheckOutProcess_CashOnDelivery_Method() throws EncryptedDocumentException, IOException
+	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class)
+	public void CheckOutProcess() throws EncryptedDocumentException, IOException
 	{
 		// ----------------- login
 				DDT_Class dtCl = new DDT_Class();
@@ -54,21 +59,34 @@ public class TestCase11_trial extends Browser_Launch_Quit
 				chOutPg.changeAddress();
 				chOutPg.selectAddress();
 				chOutPg.UseThisAddress();
-//				 select - cash on delivery mode ---- click on Use THis Payment btn
-				if(chOutPg.cashOnDlvry_Elmnt.isDisplayed() && chOutPg.cashOnDlvry_Elmnt.isEnabled() )
-					{
-						chOutPg.CashOnDelivery();
-						chOutPg.useThisPayment();
-					}
-					else
-					{
-						System.out.println("Cash On Delivery is not available for this product.Selecting UPI method....");
-						chOutPg.OtherUPIApps_Payment();
-					}
-//					WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(10));
-//					w1.until(ExpectedConditions.visibilityOf(chOutPg.UseThisPayment_Btn_Elmnt));
-					chOutPg.useThisPayment();
-					//  ------------------ check product review block is displayed ---
-					Assert.assertEquals(chOutPg.Review_items.isDisplayed(), true);
+//				 select - NetBanking mode ---- click on Use THis Payment btn
+				try
+				{
+					chOutPg.PayMentMode_NetBanking();
+					chOutPg.SelectBank_NetBanking();
+				}
+				catch(NoSuchElementException ex)
+				{
+					chOutPg.changePaymentMode();
+					chOutPg.PayMentMode_NetBanking();
+					chOutPg.SelectBank_NetBanking();
+				}
+				finally
+				{
+					chOutPg.useThisPayment(driver);
+				}
+				// -------------- if prime msg occures handle this ----------
+				try
+				{
+					WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+					w1.until(ExpectedConditions.elementToBeClickable(chOutPg.prime_msg_dismiss));
+					chOutPg.dismiss_PrimeMsg();
+				}
+				catch(NoSuchElementException ex1)
+				{
+					System.out.println("NoSuchElementException-- prime msg not displayed");
+				}
+		//  ------------------ check product review block is displayed ---
+				Assert.assertEquals(chOutPg.Review_items.isDisplayed(), true, "TestCase 11 - Failed");
 	}
 }

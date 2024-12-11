@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -50,13 +51,20 @@ public class TestCase14  extends Browser_Launch_Quit
 		
 		//-------------- Clear already given ratings -------- click on 5th Star - 
 		Thread.sleep(2000);
-		if(ordrPg.clear_Review_Btn.isDisplayed())
+		try
 		{
 			ordrPg.Clear_Review();
 		}
-		ordrPg.Apply_fiveStar();
+		catch(NoSuchElementException ex)
+		{
+			System.out.println("Clear button not found... Applying fresh Ratings");
+		}
+		finally
+		{
+			ordrPg.Apply_fiveStar();
+		}
 		// ----------------- check if "Submitted" alert displayed -----------
-		Assert.assertEquals(ordrPg.Review_Submission_Alert.isDisplayed(), true);
+		Assert.assertEquals(ordrPg.Review_Submission_Alert.isDisplayed(), true, "TestCase 14 - Failed");
 		
 		// ------------------ SingOut -------
 		hmPg.acAndList(driver);

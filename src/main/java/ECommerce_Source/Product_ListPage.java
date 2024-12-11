@@ -10,6 +10,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -48,13 +50,16 @@ public class Product_ListPage
 //	@FindBy(xpath="//span[@class='a-button-text a-declarative']")
 //	WebElement sort_dropdown_click;
 	
+	@FindBy(xpath="(//span[.='Price'])")
+	WebElement priceTag_Elmnt;
+	
 	@FindBy(id="s-result-sort-select")
 	WebElement sort_dropdown;
 	
 	@FindBy(xpath="//div[@class='a-row puis-atcb-remove-group']")
 	public WebElement addedCart_tag;
 	
-	@FindBy(xpath="//input[@class='s-range-input'])[2]")
+	@FindBy(id="p_36/range-slider_slider-item_lower-bound-slider")
 	WebElement price_Slider_Elmnt;
 	
 	@FindBy(xpath="//div[@class='a-section sf-submit-range-button']")
@@ -153,7 +158,7 @@ public class Product_ListPage
 	public void Fltr_By_Disocunt_Shoes() throws InterruptedException
 	{
 		Category_By_Discount.size();
-		int i = 5;
+		int i = 2;
 //		for(int i=0; i<Category_By_Discount.size();i++)
 //		{
 		try
@@ -185,7 +190,7 @@ public class Product_ListPage
 				}
 				catch(StringIndexOutOfBoundsException ex) // Range [1, -6) out of bounds for length 0
 				{
-					System.out.println("this product is not having "+disctCateGory);
+					System.out.println("this product is not having discount"+disctCateGory);
 				}
 				
 			}
@@ -204,16 +209,23 @@ public class Product_ListPage
 	
 	public void slider_PriceRange_Set() throws AWTException, InterruptedException
 	{
+		Point CustReviewLoc = priceTag_Elmnt.getLocation();
+		int CustRvwlocX = CustReviewLoc.getX();
+		int CustRvwlocY = CustReviewLoc.getY();
+		
+		JavascriptExecutor js_CustRvw = (JavascriptExecutor) driver;
+		js_CustRvw.executeScript("window.scrollBy(0,"+CustRvwlocY+")");
+		
 		Actions a1 = new Actions(driver);
-		a1.dragAndDropBy(price_Slider_Elmnt, -40, 0).perform();
-//		a1.doubleClick(price_Slider_Elmnt).perform();
+//		a1.dragAndDropBy(price_Slider_Elmnt, -40, 0).perform();
+		a1.doubleClick(price_Slider_Elmnt).perform();
 		Robot r1 = new Robot();
-		r1.keyPress(KeyEvent.VK_LEFT);
+		r1.keyPress(KeyEvent.VK_RIGHT);
 		Thread.sleep(500);
-		r1.keyPress(KeyEvent.VK_LEFT);
-		Thread.sleep(500);
-		r1.keyPress(KeyEvent.VK_LEFT);
-		Thread.sleep(500);
+		r1.keyPress(KeyEvent.VK_RIGHT);
+//		Thread.sleep(500);
+//		r1.keyPress(KeyEvent.VK_RIGHT);
+//		Thread.sleep(500);
 //		int i = 1;
 //		while(i==1)
 //		{

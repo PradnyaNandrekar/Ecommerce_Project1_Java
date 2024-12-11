@@ -62,7 +62,7 @@ public class TestCase13  extends Browser_Launch_Quit
 		// ------------ Check if error code IS displayed 
 //		String errorPromoCode = chkOutPg.Promo_Code_Error.getText();
 //		Assert.assertEquals(errorPromoCode.contains("code you entered is not valid"), true);
-		Assert.assertEquals(chkOutPg.Promo_Code_Error.isDisplayed(), true);
+		Assert.assertEquals(chkOutPg.Promo_Code_Error.isDisplayed(), true, "TestCase 13 - Failed");
 	
 	}
 }

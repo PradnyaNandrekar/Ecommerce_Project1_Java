@@ -44,7 +44,7 @@ public class TestCase04  extends Browser_Launch_Quit
 		l_Security.Enter_Name();
 		
 		String NameEditSuccess = l_Security.successAlert.getText();
-		Assert.assertEquals(NameEditSuccess.contains("Name updated"), true);
+		Assert.assertEquals(NameEditSuccess.contains("Name updated"), true, "TestCase 04 - Name Edit Failed");
 		
 		// -------- Click on Edit Password -  
 		l_Security.EditBtn_Password();
@@ -59,7 +59,7 @@ public class TestCase04  extends Browser_Launch_Quit
 		// check if "Password updated" alert message displayed
 		//----------------- edit Password
 		String PasswordEditSuccess = l_Security.successAlert.getText();
-		Assert.assertEquals(PasswordEditSuccess.contains("Password updated"), true);
+		Assert.assertEquals(PasswordEditSuccess.contains("Password updated"), true, "TestCase 04 - PW update Failed");
 		
 	}
 	

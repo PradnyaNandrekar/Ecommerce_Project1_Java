@@ -32,7 +32,7 @@ public class TestCase02 extends Browser_Launch_Quit
 		SnInPw.Enter_Password();
 		SnInPw.SignIn_Submit();
 		// ----------- Check if Search Text box is displayed or not -------------
-		Assert.assertEquals(HomePage.SearchBox_Elmnt.isDisplayed(), true);
+		Assert.assertEquals(HomePage.SearchBox_Elmnt.isDisplayed(), true, "TestCase 02 - Failed");
 		Reporter.log("Logged In Successfully");
 	}
 }

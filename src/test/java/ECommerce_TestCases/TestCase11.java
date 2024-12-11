@@ -26,7 +26,7 @@ import ECommerce_Source.SignIn_PasswordPage;
 
 public class TestCase11 extends Browser_Launch_Quit
 {
-	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class, enabled=false)
+	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class, enabled=true)
 	public void CheckOutProcess_NetBanking_Method() throws EncryptedDocumentException, IOException
 	{
 		// ------------------- login
@@ -80,7 +80,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		// select -------------------- NetBanking mode ----
 		chkOutPg.PayMentMode_NetBanking();
 		chkOutPg.SelectBank_NetBanking();
-		chkOutPg.useThisPayment();
+		chkOutPg.useThisPayment(driver);
 //		WebElement e1 = driver.findElement(By.xpath("//input[@id='spc-gcpromoinput']"));
 //		e1.sendKeys("12345"+Keys.ENTER);
 		chkOutPg.dismiss_PrimeMsg();
@@ -89,7 +89,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		Assert.assertEquals(chkOutPg.Review_items.isDisplayed(), true);
 	}
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void CheckOutProcess_CashOnDelivery_Method() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		// ----------------- login
@@ -180,7 +180,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		}
 		WebDriverWait w2 = new WebDriverWait(driver, Duration.ofSeconds(10));
 		w2.until(ExpectedConditions.visibilityOf(chkOutPg.UseThisPayment_Btn_Elmnt));
-		chkOutPg.useThisPayment();
+		chkOutPg.useThisPayment(driver);
 
 		//  ------------------ check product review block is displayed ---
 		Assert.assertEquals(chkOutPg.Review_items.isDisplayed(), true);

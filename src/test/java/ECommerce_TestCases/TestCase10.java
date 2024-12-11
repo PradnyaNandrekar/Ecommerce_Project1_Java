@@ -72,7 +72,7 @@ public class TestCase10 extends Browser_Launch_Quit
 				System.out.println("After Add-"+qty1);
 		
 				// -------------- Check Initial Qty > Qty after add
-				Assert.assertEquals(qty1>qty, true, "Adding product failed");
+				Assert.assertEquals(qty1>qty, true, "TestCase 10 - Failed - Adding product failed");
 					
 				//---------------Remove qty 1 from cart------------------
 				
@@ -87,7 +87,7 @@ public class TestCase10 extends Browser_Launch_Quit
 				int qty2 = Integer.parseInt(ShpCartPg.cnt_elmnt.getText());
 				System.out.println("After remove-"+qty2);
 				
-				Assert.assertEquals(qty2<qty1, true, "Removing product failed");
+				Assert.assertEquals(qty2<qty1, true, "TestCase 10 - Failed - Removing product failed");
 				
 				//---------------Delete 1 product from Cart --------------
 //				Thread.sleep(5000);
@@ -100,7 +100,7 @@ public class TestCase10 extends Browser_Launch_Quit
 				int aftrDelt = ShpCartPg.Qty_Stepper_Elmnt.size();
 				System.out.println("Items in Cart after delete -> "+aftrDelt);
 				// ---Check No of items in cart after delete should be less than before delete
-				Assert.assertEquals(aftrDelt<befrDelt, true, "Deleting product Failed");
+				Assert.assertEquals(aftrDelt<befrDelt, true, "TestCase 10 - Failed - Deleting product Failed");
 	}
 
 }

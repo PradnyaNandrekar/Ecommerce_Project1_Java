@@ -44,7 +44,7 @@ public class HomePage extends DDT_Class
 	@FindBy(xpath="(//div[@id='nav-al-your-account']/a/span)[1]")
 	WebElement yourAccount_Elmnt;
 	
-	@FindBy(xpath="(//div[@id='nav-al-your-account']/a/span)[2]")
+	@FindBy(xpath="//a[.='Your Orders']")
 	WebElement yourOrder_Elmnt;
 
 	public void acAndList(WebDriver driver)

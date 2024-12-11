@@ -25,7 +25,7 @@ public class TestCase05 extends Browser_Launch_Quit
 		Product_ListPage prodList = new Product_ListPage(driver);
 //		System.out.println(prodList.prod_List_Elmnt.size());
 		// ----------- check if products search count is > 10
-		Assert.assertEquals((prodList.prod_List_Elmnt.size()>10), true);
+		Assert.assertEquals((prodList.prod_List_Elmnt.size()>10), true, "TestCase 05 - Failed");
 		
 	}
 	

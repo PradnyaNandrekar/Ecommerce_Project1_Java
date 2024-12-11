@@ -1,7 +1,10 @@
 package ECommerce_Source;
 
+
+
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -28,22 +31,31 @@ public class Listeners_Logic implements ITestListener
 		// TODO Auto-generated method stub
 		ITestListener.super.onTestSuccess(result);
 		Reporter.log("Test Passed successfuly");
-				
+			
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		ITestListener.super.onTestFailure(result);
-//		TakesScreenshot ts = (TakesScreenshot) driver;
-//		File screenshtFile = ts.getScreenshotAs(OutputType.FILE);
-//		File DestLoc = new File("C:\\Users\\nandr\\eclipse-workspace\\Ecommerce\\ScreenShots_Project1"+Math.random()+".png");
-//		try {
-//			FileHandler.copy(screenshtFile, DestLoc);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		ITestListener.super.onTestFailure(result);	
+		Reporter.log("TestCase Failed");
+		Date d1 = new Date();	// epoch time format
+		Date p_Date = new Date(d1.getTime());
+		String saveDate = p_Date.toString();
+		String get_CurrentDateTime = saveDate.substring(saveDate.length()-4).concat("_").concat(saveDate.substring(4, 19));
+		String CurrentDateTime_1 = get_CurrentDateTime.replace(":", "");
+		String FinalDateTime = CurrentDateTime_1.replace(" ", "_"); ////2024_Oct_14_211438
+				
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		File dest = new File("C:\\Users\\nandr\\eclipse-workspace\\Ecommerce\\ScreenShots_Project1\\Fail_"+FinalDateTime+".png");
+		try {
+			FileHandler.copy(src, dest);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	}
 
 	@Override

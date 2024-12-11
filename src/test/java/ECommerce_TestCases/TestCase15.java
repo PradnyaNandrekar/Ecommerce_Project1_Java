@@ -66,7 +66,7 @@ public class TestCase15 extends Browser_Launch_Quit
 		SignIn_EmailPage sgEmailPg = new SignIn_EmailPage(driver);
 		
 		//---------------- check if sign in page - user name text box displayed
-		Assert.assertEquals(sgEmailPg.UserName_Elmnt.isDisplayed(), true);
+		Assert.assertEquals(sgEmailPg.UserName_Elmnt.isDisplayed(), true, "TestCase 15 - Failed");
 		
 		
 	}

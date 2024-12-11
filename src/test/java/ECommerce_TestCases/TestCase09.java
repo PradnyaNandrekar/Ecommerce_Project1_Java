@@ -53,7 +53,7 @@ public class TestCase09 extends Browser_Launch_Quit
 		ProdPg.addTo_Cart();
 		ShoppingCart_PrePage CartPrePg = new ShoppingCart_PrePage(driver);
 		// ----------- Check if "Added to cart" message displayed
-		Assert.assertEquals(CartPrePg.AddCart_success_Elmnt.getText(), "Added to cart");
+		Assert.assertEquals(CartPrePg.AddCart_success_Elmnt.getText(), "Added to cart", "TestCase 09 - Failed");
 		
 	}
 	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class, enabled=false)

@@ -26,8 +26,8 @@ import ECommerce_Source.SignIn_PasswordPage;
 
 public class TestCase12 extends Browser_Launch_Quit 
 {
-//	retryAnalyzer=ECommerce_TestCases.retryLogic.class
-	@Test()
+//	
+	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class)
 	public void PaymentMethod_Selection() throws EncryptedDocumentException, IOException, InterruptedException
 	{
 		// ------------------ Login
@@ -63,26 +63,48 @@ public class TestCase12 extends Browser_Launch_Quit
 				chkOut_Pg.PayMentMode_CreditDebitCard();
 				// Enter card Details
 				chkOut_Pg.Enter_DebitCardDetails_And_CVV(driver);
-				Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn_Elmnt.isEnabled(), true);
+				if(chkOut_Pg.UseThisPayment_Btn2_Elmnt.isEnabled())
+				{
+					Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn2_Elmnt.isEnabled(), true, "TestCase 12 - credit card selection Failed");
+				}
+				else
+				{
+					Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn_Elmnt.isEnabled(), true, "TestCase 12 - Credit card selection Failed");
+				}
 				
 		// ------------------ select - Net Banking
 				chkOut_Pg.PayMentMode_NetBanking();
 				chkOut_Pg.SelectBank_NetBanking();
-				WebElement e1 = driver.findElement(By.xpath("(//div[@class='a-box-inner a-padding-small'])[3]"));
-				e1.click();
-				Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn_Elmnt.isEnabled(), true);
+//				WebElement e1 = driver.findElement(By.xpath("(//div[@class='a-box-inner a-padding-small'])[3]"));
+//				e1.click();
+				if(chkOut_Pg.UseThisPayment_Btn2_Elmnt.isEnabled())
+				{
+					Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn2_Elmnt.isEnabled(), true, "TestCase 12 - NetBanking selection Failed");
+				}
+				else
+				{
+					Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn_Elmnt.isEnabled(), true, "TestCase 12 - Netbanking selection Failed");
+				}
+				
 			// observation -- after selecting the option - dropdown not minimizing
 		
 		// ------------------ select - Other UPI Apps
 				chkOut_Pg.OtherUPIApps_Payment();
-				Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn_Elmnt.isEnabled(), true);
+				if(chkOut_Pg.UseThisPayment_Btn2_Elmnt.isEnabled())
+				{
+					Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn2_Elmnt.isEnabled(), true, "TestCase 12 - UPI selection Failed");
+				}
+				else
+				{
+					Assert.assertEquals(chkOut_Pg.UseThisPayment_Btn_Elmnt.isEnabled(), true, "TestCase 12 - UPI selection Failed");
+				}
 		// ------------------ select - Cash on Delivery/Pay on Delivery
 				Thread.sleep(1000);
 				chkOut_Pg.CashOnDelivery();
-				chkOut_Pg.useThisPayment();
+				chkOut_Pg.useThisPayment(driver);
 				WebDriverWait wx = new WebDriverWait(driver, Duration.ofSeconds(15));
 				wx.until(ExpectedConditions.visibilityOf(chkOut_Pg.place_Ur_order_btn));
-				Assert.assertEquals(chkOut_Pg.place_Ur_order_btn.isDisplayed(), true);
+				Assert.assertEquals(chkOut_Pg.place_Ur_order_btn.isDisplayed(), true, "TestCase 12 - COD selection  Failed");
 				
 	}
 

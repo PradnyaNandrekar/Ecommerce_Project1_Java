@@ -48,7 +48,7 @@ public class TestCase07 extends Browser_Launch_Quit
 		boolean prod_Reviews = prodPg.prod_Reviews_Elmnt.isDisplayed();
 //		boolean prod_Reviews = false;    // Use To test Fail condition
 		boolean allFields_Present = prod_Des && prod_Price && prod_Reviews;
-		Assert.assertEquals(allFields_Present, true, "One of the Product Details Field is not Present");
+		Assert.assertEquals(allFields_Present, true, "TestCase 07 - Failed - One of the Product Details Field is not Present");
 		Reporter.log("All Product Details are present");
 		
 		

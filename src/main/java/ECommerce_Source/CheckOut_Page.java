@@ -4,10 +4,12 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -66,9 +68,12 @@ public class CheckOut_Page extends DDT_Class
 	@FindBy(name="ppw-bankSelection_dropdown")
 	WebElement SelectBankDropDown_Options;
 	
-	@FindBy(xpath="//span[@id='checkout-primary-continue-button-id']/span")
+	@FindBy(xpath="(//span/span[.='Use this payment method'])[3]")
 	public WebElement UseThisPayment_Btn_Elmnt;
-	// "(//span[.='Use this payment method'])[3]"
+	// "(//span/span[.='Use this payment method'])[3]"
+	
+	@FindBy(xpath="//span[@id='checkout-primary-continue-button-id']/span")
+	public WebElement UseThisPayment_Btn2_Elmnt;
 	//"//span[@id='checkout-primary-continue-button-id']/span"
 	
 	@FindBy(xpath="//span[@id='submitOrderButtonId-announce']")
@@ -123,7 +128,7 @@ public class CheckOut_Page extends DDT_Class
 	@FindBy(xpath="(//input[@name='placeYourOrder1'])[1]")
 	public WebElement place_Ur_Order_Btn;
 	
-	@FindBy(xpath="//span[@id='prime-interstitial-nothanks-button']")
+	@FindBy(xpath="//span[@class='a-prime-button a-button']")
 	public WebElement prime_msg_dismiss;
 	
 	public void changeAddress()
@@ -149,7 +154,7 @@ public class CheckOut_Page extends DDT_Class
 		Promotion_code_Elmnt.sendKeys("12345"+Keys.ENTER);
 	}
 	
-	public void useThisPayment()
+	public void useThisPayment(WebDriver driver)
 	{
 		try
 		{
@@ -157,7 +162,13 @@ public class CheckOut_Page extends DDT_Class
 		}
 		catch(ElementClickInterceptedException ex2)
 		{
-			UseThisPayment_Btn_Elmnt.click();
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", UseThisPayment_Btn_Elmnt);
+//			UseThisPayment_Btn_Elmnt.click();
+		}
+		catch(NoSuchElementException ex3)
+		{
+			UseThisPayment_Btn2_Elmnt.click();
 		}
 	}
 	
@@ -224,6 +235,9 @@ public class CheckOut_Page extends DDT_Class
 	
 	public void dismiss_PrimeMsg()
 	{
+//		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		js.executeScript("arguments[0].click();", prime_msg_dismiss);
+
 		prime_msg_dismiss.click();
 	}
 	
