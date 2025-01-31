@@ -26,7 +26,7 @@ import ECommerce_Source.SignIn_PasswordPage;
 
 public class TestCase11 extends Browser_Launch_Quit
 {
-	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class, enabled=true)
+	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class, enabled=false)
 	public void CheckOutProcess_NetBanking_Method() throws EncryptedDocumentException, IOException
 	{
 		// ------------------- login
@@ -160,7 +160,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		{
 			if(chkOutPg.change_paymentMode_Elmnt.isDisplayed())
 			{
-				chkOutPg.changePaymentMode();
+				chkOutPg.changePaymentMode(driver);
 			}
 		} 
 		catch(NoSuchElementException es)

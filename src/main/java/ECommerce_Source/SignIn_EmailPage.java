@@ -16,7 +16,7 @@ import org.openqa.selenium.support.PageFactory;
 public class SignIn_EmailPage extends DDT_Class
 {
 	WebDriver driver;
-	@FindBy(id="ap_email")
+	@FindBy(xpath="//input[@name='email']")
 	public WebElement UserName_Elmnt;
 	
 	@FindBy(id="continue")

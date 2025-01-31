@@ -12,7 +12,7 @@ public class YourOrdersPage
 	@FindBy(id="time-filter")
 	WebElement oders_Time_Filter;
 	
-	@FindBy(xpath="//a[@id='a-autoid-6-announce']")
+	@FindBy(xpath="(//a[contains(text(),'Write a product review')])[1]")
 	public WebElement Wrt_Prod_Review_btn;
 
 	@FindBy(xpath="(//div[@class='a-section a-spacing-top-micro']/button)[5]")

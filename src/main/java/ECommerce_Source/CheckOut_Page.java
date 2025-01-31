@@ -29,6 +29,8 @@ public class CheckOut_Page extends DDT_Class
 	
 	@FindBy(xpath="//a[@id='payChangeButtonId']")
 	public WebElement change_paymentMode_Elmnt;
+//	//a[@aria-label='Change payment method']
+//	//a[@id='payChangeButtonId']
 	
 	@FindBy(xpath="//div[@class='a-box-inner']/fieldset/div[2]")
 	public WebElement rdo_Btn_Addr_Elmnt;
@@ -36,11 +38,16 @@ public class CheckOut_Page extends DDT_Class
 //	"((//div[@class='a-box-inner'])[1]/fieldset/div)[2]"
 //	"//div[@class='a-box-inner']/fieldset/div[2]"
 	//"//div[@id='shipping-address-selection-panel']/fieldset/div[2]/div[2]/span/div/label/i"
+//	(//div[@class='a-radio a-radio-fancy']/label/i)[2]
+	
 	
 	@FindBy(xpath="//span[@id='shipToThisAddressButton']")
 	public WebElement Use_This_Address_btn;
 //	"(//input[@class='a-button-input'])[2]"
 //	"//span[@id='shipToThisAddressButton']"
+//	(//span[contains(text(), 'Deliver to this address')])[2]
+//	(//span[contains(text(),'Use this address')])[1]
+	
 	
 	@FindBy(xpath="//span[@id='checkout-primary-continue-button-id-announce']")
 	public WebElement dlvrThisAddr_Btn_Elmnt;
@@ -72,9 +79,10 @@ public class CheckOut_Page extends DDT_Class
 	public WebElement UseThisPayment_Btn_Elmnt;
 	// "(//span/span[.='Use this payment method'])[3]"
 	
-	@FindBy(xpath="//span[@id='checkout-primary-continue-button-id']/span")
+	@FindBy(xpath="(//span[contains(text(),'Use this payment method')])[2]")
 	public WebElement UseThisPayment_Btn2_Elmnt;
 	//"//span[@id='checkout-primary-continue-button-id']/span"
+//	(//span[contains(text(),'Use this payment method')])[2]
 	
 	@FindBy(xpath="//span[@id='submitOrderButtonId-announce']")
 	public WebElement place_Ur_order_btn;
@@ -131,13 +139,25 @@ public class CheckOut_Page extends DDT_Class
 	@FindBy(xpath="//span[@class='a-prime-button a-button']")
 	public WebElement prime_msg_dismiss;
 	
+	@FindBy(xpath="//DIV[@ID='checkout-item-block-panel']")
+	public WebElement reviewProd;
+//	
+	
 	public void changeAddress()
 	{
 		change_Addr_Elmnt.click();
 	}
-	public void UseThisAddress()
+	public void UseThisAddress(WebDriver driver)
 	{
+		try
+		{
 		Use_This_Address_btn.click();
+		}
+		catch(ElementClickInterceptedException e)
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", Use_This_Address_btn);
+		}
 	}
 	
 	public void Click_PopOverWrapUp()
@@ -168,13 +188,30 @@ public class CheckOut_Page extends DDT_Class
 		}
 		catch(NoSuchElementException ex3)
 		{
+			try
+			{
 			UseThisPayment_Btn2_Elmnt.click();
+			}
+			catch(ElementClickInterceptedException e)
+			{
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", UseThisPayment_Btn2_Elmnt);
+			}
 		}
 	}
 	
-	public void changePaymentMode()
+	public void changePaymentMode(WebDriver driver)
 	{
+		try
+		{
 		change_paymentMode_Elmnt.click();
+		}
+		catch(ElementClickInterceptedException e)
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", change_paymentMode_Elmnt);
+		}
+		
 	} 
 	
 	public void DlvrToThisAddress()
@@ -201,7 +238,7 @@ public class CheckOut_Page extends DDT_Class
 			Select slct1 = new Select(debt_Crd_ExpMnth);
 			slct1.selectByValue("12");
 			Select slct2 = new Select(debt_Crd_ExpYear);
-			slct2.selectByValue("2024");
+			slct2.selectByValue("2025");
 			debt_Crd_EntrBtn.click();
 		}
 		

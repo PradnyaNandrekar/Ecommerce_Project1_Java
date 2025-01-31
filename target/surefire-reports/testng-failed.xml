@@ -4,13 +4,20 @@
   <test thread-count="5" parallel="tests" name="Test(failed)" verbose="0">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="ECommerce_TestCases.TestCase10">
+      <class name="ECommerce_TestCases.TestCase09">
         <methods>
           <include name="Quit_Amazon"/>
-          <include name="cartUpdateTest"/>
+          <include name="AddToCartTest_ProdctDeatils_Pg"/>
           <include name="Launch_Amazon"/>
         </methods>
-      </class> <!-- ECommerce_TestCases.TestCase10 -->
+      </class> <!-- ECommerce_TestCases.TestCase09 -->
+      <class name="ECommerce_TestCases.TestCase11_trial">
+        <methods>
+          <include name="CheckOutProcess"/>
+          <include name="Quit_Amazon"/>
+          <include name="Launch_Amazon"/>
+        </methods>
+      </class> <!-- ECommerce_TestCases.TestCase11_trial -->
       <class name="ECommerce_TestCases.TestCase06">
         <methods>
           <include name="Quit_Amazon"/>
@@ -18,6 +25,13 @@
           <include name="searching_Wt_Filters"/>
         </methods>
       </class> <!-- ECommerce_TestCases.TestCase06 -->
+      <class name="ECommerce_TestCases.TestCase12">
+        <methods>
+          <include name="Quit_Amazon"/>
+          <include name="Launch_Amazon"/>
+          <include name="PaymentMethod_Selection"/>
+        </methods>
+      </class> <!-- ECommerce_TestCases.TestCase12 -->
       <class name="ECommerce_TestCases.TestCase01">
         <methods>
           <include name="User_Registration_Test"/>
@@ -27,7 +41,6 @@
       </class> <!-- ECommerce_TestCases.TestCase01 -->
       <class name="ECommerce_TestCases.TestCase08_trial">
         <methods>
-          <include name="Sorting_Product_ByPrice_HtoL"/>
           <include name="Quit_Amazon"/>
           <include name="Sorting_Product_ByPrice_LtoH"/>
           <include name="Launch_Amazon"/>

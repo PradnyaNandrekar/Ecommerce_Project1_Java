@@ -1,7 +1,9 @@
 package ECommerce_TestCases;
 
 import java.time.Duration;
+
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -18,8 +20,11 @@ public class Browser_Launch_Quit extends Listeners_Logic
 	@BeforeMethod()
 	public void Launch_Amazon(String Browser_Name)
 	{
+		
 		if(Browser_Name.equalsIgnoreCase("chrome"))
 		{
+//			ChromeOptions c1 = new ChromeOptions();
+//			c1.addArguments("--headless");
 			driver = new ChromeDriver();
 		}
 		if(Browser_Name.equalsIgnoreCase("edge"))

@@ -8,6 +8,7 @@ import java.util.Set;
 import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -58,8 +59,12 @@ public class TestCase11_trial extends Browser_Launch_Quit
 				CheckOut_Page chOutPg = new CheckOut_Page(driver);
 				chOutPg.changeAddress();
 				chOutPg.selectAddress();
-				chOutPg.UseThisAddress();
+				chOutPg.UseThisAddress(driver);
+				// change payment mode
+				chOutPg.changePaymentMode(driver);
+				
 //				 select - NetBanking mode ---- click on Use THis Payment btn
+				
 				try
 				{
 					chOutPg.PayMentMode_NetBanking();
@@ -67,7 +72,7 @@ public class TestCase11_trial extends Browser_Launch_Quit
 				}
 				catch(NoSuchElementException ex)
 				{
-					chOutPg.changePaymentMode();
+					chOutPg.changePaymentMode(driver);
 					chOutPg.PayMentMode_NetBanking();
 					chOutPg.SelectBank_NetBanking();
 				}
@@ -86,7 +91,14 @@ public class TestCase11_trial extends Browser_Launch_Quit
 				{
 					System.out.println("NoSuchElementException-- prime msg not displayed");
 				}
+				catch(TimeoutException p)
+				{
+					System.out.println("NoSuchElementException-- prime msg not displayed");
+				}
+				finally
+				{
 		//  ------------------ check product review block is displayed ---
 				Assert.assertEquals(chOutPg.Review_items.isDisplayed(), true, "TestCase 11 - Failed");
-	}
+				}
+			}
 }

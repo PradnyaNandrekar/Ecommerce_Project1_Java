@@ -5,28 +5,23 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.Reporter;
 
 public class Product_ListPage 
 {
-	WebDriver driver = new ChromeDriver();
+	WebDriver driver;
 	
 	public List<Integer> l1 = new ArrayList<Integer>();
 	@FindBy(xpath="//span[@class='rush-component']/a/div")
@@ -50,7 +45,7 @@ public class Product_ListPage
 //	@FindBy(xpath="//span[@class='a-button-text a-declarative']")
 //	WebElement sort_dropdown_click;
 	
-	@FindBy(xpath="(//span[.='Price'])")
+	@FindBy(xpath="//span[.='Customer Review']")
 	WebElement priceTag_Elmnt;
 	
 	@FindBy(id="s-result-sort-select")
@@ -59,14 +54,21 @@ public class Product_ListPage
 	@FindBy(xpath="//div[@class='a-row puis-atcb-remove-group']")
 	public WebElement addedCart_tag;
 	
-	@FindBy(id="p_36/range-slider_slider-item_lower-bound-slider")
-	WebElement price_Slider_Elmnt;
+	@FindBy(id="//input[@id='p_36/range-slider_slider-item_lower-bound-slider']")
+	WebElement Lower_price_Slider_Elmnt;
 	
 	@FindBy(xpath="//div[@class='a-section sf-submit-range-button']")
+	public
 	WebElement priceSlider_Go_btn;
 	
-	@FindBy(xpath="(//span[@class='a-size-base a-color-base a-text-bold'])[3]")
-	public WebElement upper_Price_range;
+	@FindBy(xpath="//label[@for='p_36/range-slider_slider-item_upper-bound-slider']")
+	public WebElement upperPrice_Tag;
+	
+	@FindBy(xpath="//label[@for='p_36/range-slider_slider-item_lower-bound-slider']")
+	public WebElement lowerprice_Tag;
+	
+	@FindBy(xpath="//span[.='Price']")
+	WebElement pricetitle;
 	
 //	@FindBy(xpath="//div[@id='s-refinements']/div/div")
 //	List<WebElement> Categories_List;
@@ -92,6 +94,9 @@ public class Product_ListPage
 	
 	@FindBy(xpath="//div[@class='a-row a-size-base a-color-base']/div/span[2]")
 	List<WebElement> ProductDescription_Discount_shoes;
+	
+	@FindBy(xpath="//div[@class='a-section a-spacing-small puis-padding-left-micro puis-padding-right-micro']")
+	List<WebElement> Description_Prod_List;
 
 	@FindBy(xpath="(//h2[@id='acr-popover-title']/span)[9]")
 	WebElement each_Prod_rating;
@@ -206,38 +211,54 @@ public class Product_ListPage
 	{
 		priceSlider_Go_btn.click();
 	}
+	public int WrongPriceCount_slider;
+	public void getPriceRange()
+	{
+		String LowerPriceRangeStr = lowerprice_Tag.getText();
+		String LowerPriceRange1 = LowerPriceRangeStr.substring(1);
+		int LowerPriceRange = Integer.parseInt(LowerPriceRange1);
+		
+		String HigherPriceRangeStr = upperPrice_Tag.getText();
+		String HigherPrice = HigherPriceRangeStr.substring(1);
+		String HigherPrice1 = HigherPrice.replace("+", "");
+		String HigherPrice2 = HigherPrice1.replace(",", "");
+		int HigherPriceRange = Integer.parseInt(HigherPrice2);
 	
-	public void slider_PriceRange_Set() throws AWTException, InterruptedException
+		System.out.println("LowerPrice = " +LowerPriceRange);
+		System.out.println("HigherPrice = " +HigherPriceRange);
+		for(int i=0; i<l1.size()-1;i++)
+		{
+			if((l1.get(i)>=LowerPriceRange) && (l1.get(i)<=HigherPriceRange) )
+			{
+//				WrongPriceCount_slider = 0;
+			}
+			else
+			{
+				WrongPriceCount_slider += 1;
+			}
+		}
+	}
+	public void slider_PriceRange_Set(WebDriver driver) throws AWTException, InterruptedException
 	{
 		Point CustReviewLoc = priceTag_Elmnt.getLocation();
-		int CustRvwlocX = CustReviewLoc.getX();
-		int CustRvwlocY = CustReviewLoc.getY();
+		int x = CustReviewLoc.getX();
+		int y = CustReviewLoc.getY();
 		
-		JavascriptExecutor js_CustRvw = (JavascriptExecutor) driver;
-		js_CustRvw.executeScript("window.scrollBy(0,"+CustRvwlocY+")");
+		System.out.println("Y cordinate - "+ y);
+		JavascriptExecutor js=(JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,"+(y)+")");
 		
 		Actions a1 = new Actions(driver);
-//		a1.dragAndDropBy(price_Slider_Elmnt, -40, 0).perform();
-		a1.doubleClick(price_Slider_Elmnt).perform();
-		Robot r1 = new Robot();
-		r1.keyPress(KeyEvent.VK_RIGHT);
-		Thread.sleep(500);
-		r1.keyPress(KeyEvent.VK_RIGHT);
-//		Thread.sleep(500);
-//		r1.keyPress(KeyEvent.VK_RIGHT);
-//		Thread.sleep(500);
-//		int i = 1;
-//		while(i==1)
-//		{
-//			r1.keyPress(KeyEvent.VK_LEFT);
-//			Thread.sleep(500);
-//			if (upper_Price_range.getText()=="₹1,000")
-//			{
-//				break;
-//				i=0;
-//			}
-//			
-//		}
+		a1.doubleClick(pricetitle).perform();
+		Robot r1=new Robot();
+		r1.keyPress(KeyEvent.VK_TAB);
+		r1.keyPress(KeyEvent.VK_TAB);
+		for(int i=0;i<=100;i++)
+		{
+			Thread.sleep(100);
+			r1.keyPress(KeyEvent.VK_LEFT);
+		}
+		
 				
 	}
 	
@@ -249,34 +270,35 @@ public class Product_ListPage
 	public void price_List()
 	{
 		System.out.println("Size of list-> "+ all_Prod_price_Elmnt.size());
-		for (int i=0; i < all_Prod_price_Elmnt.size(); i++)
-		{
-				WebElement list_elmnt = all_Prod_price_Elmnt.get(i);
-				String price1 = list_elmnt.getText();
-				String price2 = price1.replaceAll(" ", "");
-				try
-				{
-					if(!(price2.contains(",")))
-					{
-						int f_price = Integer.parseInt(price2);
-						l1.add(f_price);
-					}
-					else
-					{
-						int f_price = Integer.parseInt(price2.replace(",", ""));
-						l1.add(f_price);
-					}
 		
-				}
-				catch(NullPointerException e1)
+			for (int i=0; i < all_Prod_price_Elmnt.size(); i++)
 				{
-					System.out.println("Price not present handled exception");
-				}
-				catch(NumberFormatException ex)
-				{
-					System.out.println("NumberFormatException handled");
-				}
-				
+					WebElement list_elmnt = all_Prod_price_Elmnt.get(i);
+					String price1 = list_elmnt.getText();
+					String price2 = price1.replaceAll(" ", "");
+					try
+					{
+						if(!(price2.contains(",")))
+						{
+							int f_price = Integer.parseInt(price2);
+							l1.add(f_price);
+						}
+						else
+						{
+							int f_price = Integer.parseInt(price2.replace(",", ""));
+							l1.add(f_price);
+						}
+			
+					}
+					catch(NullPointerException e1)
+					{
+						System.out.println("Price not present handled exception");
+					}
+					catch(NumberFormatException ex)
+					{
+						System.out.println("NumberFormatException handled");
+					}
+					
 		}
 		System.out.println("Default List of Price - "+ l1);
 	}

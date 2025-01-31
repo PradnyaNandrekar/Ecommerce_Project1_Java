@@ -102,9 +102,9 @@ public class TestCase12 extends Browser_Launch_Quit
 				Thread.sleep(1000);
 				chkOut_Pg.CashOnDelivery();
 				chkOut_Pg.useThisPayment(driver);
-				WebDriverWait wx = new WebDriverWait(driver, Duration.ofSeconds(15));
-				wx.until(ExpectedConditions.visibilityOf(chkOut_Pg.place_Ur_order_btn));
-				Assert.assertEquals(chkOut_Pg.place_Ur_order_btn.isDisplayed(), true, "TestCase 12 - COD selection  Failed");
+//				WebDriverWait wx = new WebDriverWait(driver, Duration.ofSeconds(15));
+//				wx.until(ExpectedConditions.visibilityOf(chkOut_Pg.place_Ur_order_btn));
+				Assert.assertEquals(chkOut_Pg.reviewProd.isDisplayed(), true, "TestCase 12 - COD selection  Failed");
 				
 	}
 

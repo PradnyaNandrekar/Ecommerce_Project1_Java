@@ -10,7 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends DDT_Class
 {
+	
 	WebDriver driver;
+	
 	@FindBy(xpath="//span[@class='nav-line-2 ']")
 	WebElement Ac_And_List_Elmnt;
 	
@@ -41,8 +43,10 @@ public class HomePage extends DDT_Class
 	@FindBy(xpath="//div[@id='a-popover-2']")
 	public WebElement profile_Alert;
 	
-	@FindBy(xpath="(//div[@id='nav-al-your-account']/a/span)[1]")
+	@FindBy(xpath="//span[.='Your Account']")
 	WebElement yourAccount_Elmnt;
+//	
+//	(//div[@id='nav-al-your-account']/a/span)[1]
 	
 	@FindBy(xpath="//a[.='Your Orders']")
 	WebElement yourOrder_Elmnt;

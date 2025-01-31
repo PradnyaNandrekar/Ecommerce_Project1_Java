@@ -4,12 +4,13 @@
   <test thread-count="5" parallel="tests" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="ECommerce_TestCases.TestCase06">
+      <class name="ECommerce_TestCases.TestCase01">
         <methods>
+          <include name="User_Registration_Test"/>
+          <include name="Quit_Amazon"/>
           <include name="Launch_Amazon"/>
-          <include name="searching_Wt_Price"/>
         </methods>
-      </class> <!-- ECommerce_TestCases.TestCase06 -->
+      </class> <!-- ECommerce_TestCases.TestCase01 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

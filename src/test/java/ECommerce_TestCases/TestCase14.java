@@ -31,9 +31,11 @@ public class TestCase14  extends Browser_Launch_Quit
 		// ----------------- Login  
 		SignIn_EmailPage Sng_Eml = new SignIn_EmailPage(driver);
 		Sng_Eml.UserName_Ymn();
+//		Sng_Eml.UserName();
 		Sng_Eml.Continue_Click();
 		SignIn_PasswordPage Sng_PW = new SignIn_PasswordPage(driver);
 		Sng_PW.Enter_Password_Ymn();
+//		Sng_PW.Enter_Password();
 		Sng_PW.SignIn_Submit();
 		
 		// ----------------- Hover ovr Ac and List,  Click On Your Order---------

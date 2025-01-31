@@ -1,11 +1,7 @@
 package ECommerce_Source;
-
-
-
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -48,7 +44,7 @@ public class Listeners_Logic implements ITestListener
 				
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("C:\\Users\\nandr\\eclipse-workspace\\Ecommerce\\ScreenShots_Project1\\Fail_"+FinalDateTime+".png");
+		File dest = new File("C:\\Users\\nandr\\eclipse-workspace\\Ecommerce\\ScreenShots_Project1\\Fail_"+result.getMethod().getMethodName()+".png");
 		try {
 			FileHandler.copy(src, dest);
 		} catch (IOException e) {
