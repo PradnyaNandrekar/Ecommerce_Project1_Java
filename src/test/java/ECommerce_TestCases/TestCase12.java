@@ -57,9 +57,12 @@ public class TestCase12 extends Browser_Launch_Quit
 				
 				ProductPage prodPg= new ProductPage(driver);
 				prodPg.Buy_Now_Click();
-	
-		// ------------------ select - Credit or debit card 
 				CheckOut_Page chkOut_Pg = new CheckOut_Page(driver);
+				chkOut_Pg.UseThisAddress(driver);
+				// change payment mode
+				chkOut_Pg.changePaymentMode(driver);
+		// ------------------ select - Credit or debit card 
+				
 				chkOut_Pg.PayMentMode_CreditDebitCard();
 				// Enter card Details
 				chkOut_Pg.Enter_DebitCardDetails_And_CVV(driver);

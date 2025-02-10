@@ -60,7 +60,7 @@ public class TestCase11 extends Browser_Launch_Quit
 		
 		if(chkOutPg.change_Addr_Elmnt.isDisplayed())
 		{
-			chkOutPg.changeAddress();
+			chkOutPg.changeAddress(driver);
 			chkOutPg.selectAddress();
 		}
 //		if(chkOutPg.dlvrThisAddr_Btn_Elmnt.isDisplayed())

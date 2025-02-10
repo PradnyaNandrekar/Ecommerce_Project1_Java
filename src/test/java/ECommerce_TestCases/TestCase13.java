@@ -55,14 +55,19 @@ public class TestCase13  extends Browser_Launch_Quit
 		ProductPage prodPg= new ProductPage(driver);
 		prodPg.Buy_Now_Click();
 		
+		CheckOut_Page chOutPg = new CheckOut_Page(driver);
+		chOutPg.changeAddress(driver);
+//		chOutPg.selectAddress();
+		chOutPg.UseThisAddress(driver);
+		
 		// ------------ Enter Promo Code 
-		CheckOut_Page chkOutPg= new CheckOut_Page(driver);
-		chkOutPg.Enter_Promo_Code();
+		
+		chOutPg.Enter_Promo_Code();
 		
 		// ------------ Check if error code IS displayed 
 //		String errorPromoCode = chkOutPg.Promo_Code_Error.getText();
 //		Assert.assertEquals(errorPromoCode.contains("code you entered is not valid"), true);
-		Assert.assertEquals(chkOutPg.Promo_Code_Error.isDisplayed(), true, "TestCase 13 - Failed");
+		Assert.assertEquals(chOutPg.Promo_Code_Error.isDisplayed(), true, "TestCase 13 - Failed");
 	
 	}
 }

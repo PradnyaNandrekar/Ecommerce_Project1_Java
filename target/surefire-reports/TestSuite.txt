@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 21, Failures: 2, Errors: 0, Skipped: 5, Time elapsed: 762.3 s <<< FAILURE! -- in TestSuite
-ECommerce_TestCases.TestCase08_trial.Sorting_Product_ByPrice_LtoH -- Time elapsed: 20.83 s <<< FAILURE!
-java.lang.AssertionError: TestCase 08 - Failed - Price Sorting L to H failed expected [0] but found [4]
+Tests run: 20, Failures: 2, Errors: 0, Skipped: 4, Time elapsed: 872.2 s <<< FAILURE! -- in TestSuite
+ECommerce_TestCases.TestCase08_trial.Sorting_Product_ByPrice_LtoH -- Time elapsed: 17.15 s <<< FAILURE!
+java.lang.AssertionError: TestCase 08 - Failed - Price Sorting L to H failed expected [0] but found [3]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
@@ -32,13 +32,35 @@ java.lang.AssertionError: TestCase 08 - Failed - Price Sorting L to H failed exp
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1570)
 
-ECommerce_TestCases.TestCase06.searching_Wt_Filters -- Time elapsed: 51.39 s <<< FAILURE!
-java.lang.AssertionError: 
-The following asserts failed:
-	TestCase 06 - Filter by discount Failed expected [0] but found [3]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at ECommerce_TestCases.TestCase06.searching_Wt_Filters(TestCase06.java:52)
+ECommerce_TestCases.TestCase02.SignIn -- Time elapsed: 10.30 s <<< FAILURE!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=133.0.6943.59)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7d0d6316cbb6c1f4d528cf7ff824e805, clickElement {id=f.7685BACCF3372A42FD8B7BC18D76E844.d.607093461865D76CDEBC9B4691B5F152.e.38}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.59, chrome: {chromedriverVersion: 133.0.6943.53 (9a80935019b0..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58331}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58331/devtoo..., se:cdpVersion: 133.0.6943.59, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7d0d6316cbb6c1f4d528cf7ff824e805)] -> xpath: (//a[.='Sign in'])[1]]
+Session ID: 7d0d6316cbb6c1f4d528cf7ff824e805
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
+	at ECommerce_Source.HomePage.Sign_In(HomePage.java:84)
+	at ECommerce_TestCases.TestCase02.SignIn(TestCase02.java:26)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)

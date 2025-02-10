@@ -4,13 +4,20 @@
   <test thread-count="5" parallel="tests" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="ECommerce_TestCases.TestCase01">
+      <class name="ECommerce_TestCases.TestCase08_trial">
         <methods>
-          <include name="User_Registration_Test"/>
           <include name="Quit_Amazon"/>
+          <include name="Sorting_Product_ByPrice_LtoH"/>
           <include name="Launch_Amazon"/>
         </methods>
-      </class> <!-- ECommerce_TestCases.TestCase01 -->
+      </class> <!-- ECommerce_TestCases.TestCase08_trial -->
+      <class name="ECommerce_TestCases.TestCase13">
+        <methods>
+          <include name="Quit_Amazon"/>
+          <include name="Launch_Amazon"/>
+          <include name="CheckOutProcess_Enter_PromoCode"/>
+        </methods>
+      </class> <!-- ECommerce_TestCases.TestCase13 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

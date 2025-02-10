@@ -19,8 +19,9 @@ public class TestCase01 extends Browser_Launch_Quit
 		// ------------ Launch amazon -----------
 		HomePage hmPg = new HomePage(driver);
 		// ------------ Hover over Ac and List,  select Start Here -----------
+		
 		hmPg.acAndList(driver);
-		hmPg.startHere_Click();
+		hmPg.startHere_Click(driver);
 		
 		// ------------ Enter UN, Select Cntry Code, Enter Mob No. , Enter PW, and Verify -----------
 		RegistrationPage RgPg = new RegistrationPage(driver);

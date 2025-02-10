@@ -6,10 +6,8 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.poi.EncryptedDocumentException;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -27,6 +25,7 @@ import ECommerce_Source.SignIn_PasswordPage;
 
 public class TestCase11_trial extends Browser_Launch_Quit
 {
+	
 	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class)
 	public void CheckOutProcess() throws EncryptedDocumentException, IOException
 	{
@@ -57,7 +56,7 @@ public class TestCase11_trial extends Browser_Launch_Quit
 				prodPg.Buy_Now_Click();
 				
 				CheckOut_Page chOutPg = new CheckOut_Page(driver);
-				chOutPg.changeAddress();
+				chOutPg.changeAddress(driver);
 				chOutPg.selectAddress();
 				chOutPg.UseThisAddress(driver);
 				// change payment mode
@@ -98,7 +97,19 @@ public class TestCase11_trial extends Browser_Launch_Quit
 				finally
 				{
 		//  ------------------ check product review block is displayed ---
-				Assert.assertEquals(chOutPg.Review_items.isDisplayed(), true, "TestCase 11 - Failed");
+					try
+					{
+						WebDriverWait w1 = new 	WebDriverWait(driver, Duration.ofSeconds(5));
+						w1.until(ExpectedConditions.visibilityOf(chOutPg.Review_items));
+					}
+					catch(TimeoutException t)
+					{
+						System.out.println("TimeoutException handled");
+					}
+					finally
+					{
+						Assert.assertEquals(chOutPg.Review_items.isDisplayed(), true, "TestCase 11 - Failed");
+					}
 				}
 			}
 }

@@ -1,12 +1,18 @@
 package ECommerce_Source;
 
 
+import java.time.Duration;
+
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends DDT_Class
 {
@@ -53,11 +59,14 @@ public class HomePage extends DDT_Class
 
 	public void acAndList(WebDriver driver)
 	{
+		
 		Actions a1 = new Actions(driver);
 		a1.moveToElement(Ac_And_List_Elmnt).perform();
 	}
-	public void startHere_Click()
+	public void startHere_Click(WebDriver driver)
 	{
+		WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(5));
+		w1.until(ExpectedConditions.visibilityOf(startHere_Elmnt));
 		startHere_Elmnt.click();
 	}
 	public void yourAccount_Click()
@@ -74,7 +83,15 @@ public class HomePage extends DDT_Class
 	}
 	public void Sign_In()
 	{
-		Sign_In_Elmnt.click();
+		try
+		{
+			Sign_In_Elmnt.click();
+		}
+		catch(ElementClickInterceptedException e)
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", Sign_In_Elmnt);
+		}
 	}
 	
 	public void Sign_Out()

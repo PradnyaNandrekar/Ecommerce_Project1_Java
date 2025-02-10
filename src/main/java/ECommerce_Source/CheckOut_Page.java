@@ -3,10 +3,12 @@ package ECommerce_Source;
 import java.time.Duration;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -40,9 +42,15 @@ public class CheckOut_Page extends DDT_Class
 	//"//div[@id='shipping-address-selection-panel']/fieldset/div[2]/div[2]/span/div/label/i"
 //	(//div[@class='a-radio a-radio-fancy']/label/i)[2]
 	
+	@FindBy(xpath="(//div[@class='a-radio a-radio-fancy']/label/i)[2]")
+	public WebElement rdo_Btn_Addr_Elmnt1;
 	
 	@FindBy(xpath="//span[@id='shipToThisAddressButton']")
 	public WebElement Use_This_Address_btn;
+	
+	@FindBy(xpath="(//span[contains(text(), 'Deliver to this address')])[2]")
+	public WebElement Use_This_Address_btn1;
+	
 //	"(//input[@class='a-button-input'])[2]"
 //	"//span[@id='shipToThisAddressButton']"
 //	(//span[contains(text(), 'Deliver to this address')])[2]
@@ -88,8 +96,10 @@ public class CheckOut_Page extends DDT_Class
 	public WebElement place_Ur_order_btn;
 //	"//span[@id='submitOrderButtonId-announce']"
 //	"(//input[@name='placeYourOrder1'])[1]"
-	@FindBy(xpath="//div[@ID='spc-orders']")
+	@FindBy(xpath="//div[@id='checkout-item-block-0']")
 	public WebElement Review_items;
+//	  "//div[@id='checkout-item-block-0']"
+//	"//div[@ID='spc-orders']"
 	
 	@FindBy(xpath="//input[@name='ppw-claimCode']")
 	public WebElement Promotion_code_Elmnt;
@@ -136,27 +146,42 @@ public class CheckOut_Page extends DDT_Class
 	@FindBy(xpath="(//input[@name='placeYourOrder1'])[1]")
 	public WebElement place_Ur_Order_Btn;
 	
-	@FindBy(xpath="//span[@class='a-prime-button a-button']")
+	@FindBy(xpath="//a[contains(text(),'No Thanks')]")
 	public WebElement prime_msg_dismiss;
 	
 	@FindBy(xpath="//DIV[@ID='checkout-item-block-panel']")
 	public WebElement reviewProd;
 //	
 	
-	public void changeAddress()
+	public void changeAddress(WebDriver driver)
 	{
-		change_Addr_Elmnt.click();
+		try
+		{
+			WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(3));
+			w1.until(ExpectedConditions.visibilityOf(change_Addr_Elmnt));
+			change_Addr_Elmnt.click();
+		}
+		catch(TimeoutException ex)
+		{
+			
+		}
+		
 	}
 	public void UseThisAddress(WebDriver driver)
 	{
 		try
 		{
-		Use_This_Address_btn.click();
+			Use_This_Address_btn.click();
 		}
 		catch(ElementClickInterceptedException e)
 		{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();", Use_This_Address_btn);
+		}
+		catch(NoSuchElementException e1)
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].click();", Use_This_Address_btn1);
 		}
 	}
 	
@@ -204,12 +229,16 @@ public class CheckOut_Page extends DDT_Class
 	{
 		try
 		{
-		change_paymentMode_Elmnt.click();
+			change_paymentMode_Elmnt.click();
 		}
 		catch(ElementClickInterceptedException e)
 		{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();", change_paymentMode_Elmnt);
+		}
+		catch(NoSuchElementException e2)
+		{
+			System.out.println("NoSuchElementException handled");
 		}
 		
 	} 
@@ -287,7 +316,15 @@ public class CheckOut_Page extends DDT_Class
 	
 	public void selectAddress()
 	{
+		try
+		{
 			rdo_Btn_Addr_Elmnt.click();
+		}
+		catch(NoSuchElementException et)
+		{
+			rdo_Btn_Addr_Elmnt1.click();
+		}
+		
 	}
 	
 	public void CashOnDelivery() 
