@@ -25,6 +25,7 @@ import ECommerce_Source.SignIn_PasswordPage;
 
 public class TestCase13  extends Browser_Launch_Quit
 {
+//	
 	@Test(retryAnalyzer=ECommerce_TestCases.retryLogic.class)
 	public void CheckOutProcess_Enter_PromoCode() throws EncryptedDocumentException, IOException, InterruptedException
 	{
@@ -62,7 +63,7 @@ public class TestCase13  extends Browser_Launch_Quit
 		
 		// ------------ Enter Promo Code 
 		
-		chOutPg.Enter_Promo_Code();
+		chOutPg.Enter_Promo_Code(driver);
 		
 		// ------------ Check if error code IS displayed 
 //		String errorPromoCode = chkOutPg.Promo_Code_Error.getText();

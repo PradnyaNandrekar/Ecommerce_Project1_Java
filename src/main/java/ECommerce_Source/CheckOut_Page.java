@@ -194,9 +194,34 @@ public class CheckOut_Page extends DDT_Class
 	{
 		Promo_Expander.click();
 	} 
-	public void Enter_Promo_Code()
+	public void Enter_Promo_Code(WebDriver driver)
 	{
-		Promotion_code_Elmnt.sendKeys("12345"+Keys.ENTER);
+		try
+		{
+			Promotion_code_Elmnt.sendKeys("12345"+Keys.ENTER);
+		}
+		catch(NoSuchElementException ec)
+		{
+			try
+			{
+				change_paymentMode_Elmnt.click();
+			}
+			catch(ElementClickInterceptedException e)
+			{
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+				js.executeScript("arguments[0].click();", change_paymentMode_Elmnt);
+			}
+			catch(NoSuchElementException e2)
+			{
+				System.out.println("NoSuchElementException handled");
+			}
+		}
+		finally
+		{
+			WebDriverWait w1 = new WebDriverWait(driver, Duration.ofSeconds(5));
+			w1.until(ExpectedConditions.visibilityOf(Promotion_code_Elmnt));
+			Promotion_code_Elmnt.sendKeys("12345"+Keys.ENTER);
+		}
 	}
 	
 	public void useThisPayment(WebDriver driver)

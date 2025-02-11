@@ -41,7 +41,7 @@ public class Browser_Launch_Quit extends Listeners_Logic
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 	}
-	@AfterMethod()
+//	@AfterMethod()
 	public void Quit_Amazon() throws InterruptedException
 	{
 		driver.quit();

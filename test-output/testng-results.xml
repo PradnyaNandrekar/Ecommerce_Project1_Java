@@ -8,12 +8,12 @@
       <![CDATA[Test Passed successfuly]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-10T21:08:14 IST" name="Suite" finished-at="2025-02-10T21:09:41 IST" duration-ms="87903">
+  <suite started-at="2025-02-11T13:19:19 IST" name="Suite" finished-at="2025-02-11T13:20:09 IST" duration-ms="49372">
     <groups>
     </groups>
-    <test started-at="2025-02-10T21:08:14 IST" name="Test" finished-at="2025-02-10T21:09:41 IST" duration-ms="87903">
+    <test started-at="2025-02-11T13:19:19 IST" name="Test" finished-at="2025-02-11T13:20:09 IST" duration-ms="49372">
       <class name="ECommerce_TestCases.TestCase13">
-        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase13@72e5a8e]" started-at="2025-02-10T21:08:14 IST" name="Launch_Amazon" finished-at="2025-02-10T21:08:46 IST" duration-ms="32380" status="PASS">
+        <test-method is-config="true" signature="Launch_Amazon(java.lang.String)[pri:0, instance:ECommerce_TestCases.TestCase13@42e99e4a]" started-at="2025-02-11T13:19:19 IST" name="Launch_Amazon" finished-at="2025-02-11T13:19:23 IST" duration-ms="3975" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -24,7 +24,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Launch_Amazon -->
-        <test-method signature="CheckOutProcess_Enter_PromoCode()[pri:0, instance:ECommerce_TestCases.TestCase13@72e5a8e]" started-at="2025-02-10T21:08:46 IST" name="CheckOutProcess_Enter_PromoCode" finished-at="2025-02-10T21:09:41 IST" duration-ms="55199" status="PASS">
+        <test-method signature="CheckOutProcess_Enter_PromoCode()[pri:0, instance:ECommerce_TestCases.TestCase13@42e99e4a]" started-at="2025-02-11T13:19:23 IST" name="CheckOutProcess_Enter_PromoCode" finished-at="2025-02-11T13:20:09 IST" duration-ms="45352" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test Started]]>
@@ -34,10 +34,6 @@
             </line>
           </reporter-output>
         </test-method> <!-- CheckOutProcess_Enter_PromoCode -->
-        <test-method is-config="true" signature="Quit_Amazon()[pri:0, instance:ECommerce_TestCases.TestCase13@72e5a8e]" started-at="2025-02-10T21:09:41 IST" name="Quit_Amazon" finished-at="2025-02-10T21:09:41 IST" duration-ms="292" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Quit_Amazon -->
       </class> <!-- ECommerce_TestCases.TestCase13 -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
